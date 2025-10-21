@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html -->
+<!-- saved from url=(0132)file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#panel-d1 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Google Data Analytics Professional Certificate - Project Charter</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridging the Skills Gap for My Future IT Career - Project Charter</title>
 <style>
 /* --- Tabs --- */
 .tabs { margin-top: 6px; }
@@ -31,226 +32,134 @@
   .tablist.sticky { position: sticky; top: 0; background: var(--bg); padding-top: 8px; z-index: 5; }
 }
     
-    /* WBS Table */
+/* WBS Table */
 .wbs-table{width:100%;border-collapse:collapse;margin:12px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:13px}
 .wbs-table th{background:linear-gradient(180deg,rgba(21,94,99,.95),rgba(21,94,99,.9));color:#fff;padding:10px;text-align:left}
 .wbs-table td{padding:10px;border-bottom:1px solid var(--border)}
 .wbs-table tbody tr:nth-child(odd){background:rgba(0,0,0,.02)}
 .wbs-table tbody tr:hover{background:rgba(26,188,156,.08)}
 .wbs-id{font-weight:600;color:var(--brand-1)}
-    /* =====================
-     Modern theme variables
-     ===================== */
-  :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --brand-1: #155e63;
-    --brand-2: #1abc9c;
-    --brand-3: #64d2c5;
-    --accent: #f59e0b;
-    --success: #10b981;
-    --danger: #ef4444;
-    --border: #e5e7eb;
-    --shadow: 0 10px 30px rgba(0,0,0,.08);
-    --radius-lg: 16px;
-    --radius-sm: 10px;
-  }
 
-  /* Dark mode */
-  .dark {
-    --bg: #0b1320;
-    --surface: #0f172a;
-    --text: #e5e7eb;
-    --muted: #94a3b8;
-    --brand-1: #22d3ee;
-    --brand-2: #10b981;
-    --brand-3: #34d399;
-    --accent: #f59e0b;
-    --success: #22c55e;
-    --danger: #ef4444;
-    --border: #1f2937;
-    --shadow: 0 10px 30px rgba(0,0,0,.45);
-  }
+/* =====================
+ Modern theme variables
+ ===================== */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand-1: #155e63;
+  --brand-2: #1abc9c;
+  --brand-3: #64d2c5;
+  --accent: #f59e0b;
+  --success: #10b981;
+  --danger: #ef4444;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius-lg: 16px;
+  --radius-sm: 10px;
+}
 
-  /* Base / typography */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
+/* Dark mode */
+.dark {
+  --bg: #0b1320;
+  --surface: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand-1: #22d3ee;
+  --brand-2: #10b981;
+  --brand-3: #34d399;
+  --accent: #f59e0b;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --border: #1f2937;
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
+}
 
-  .container {
-    max-width: 1024px;
-    margin: 32px auto;
-    padding: 0 20px;
-  }
+/* Base / typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-  /* Header */
-  .header {
-    background: radial-gradient(1200px 500px at 10% -10%, var(--brand-3) 0%, transparent 60%),
-                linear-gradient(135deg, var(--brand-1), var(--brand-2));
-    color: #fff;
-    padding: 48px 28px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-  }
-  .header h1 {
-    margin: 0 0 8px;
-    font-size: clamp(28px, 3.6vw, 42px);
-    font-weight: 800;
-    letter-spacing: .2px;
-  }
-  .header p { margin: 0; opacity: .9; }
-  .header-actions {
-    position: absolute; top: 16px; right: 16px; display: flex; gap: 8px;
-  }
-  .btn {
-    background: rgba(255,255,255,.14);
-    color: #fff; border: 1px solid rgba(255,255,255,.25);
-    padding: 8px 12px; border-radius: 999px; cursor: pointer;
-    backdrop-filter: blur(6px);
-    transition: transform .15s ease, background .15s ease;
-  }
-  .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); }
+.container { max-width: 1024px; margin: 32px auto; padding: 0 20px; }
 
-  /* Sections */
-  .section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
-    margin: 24px 0;
-    overflow: hidden;
-  }
-  .section-header {
-    padding: 18px 22px;
-    background: linear-gradient(180deg, rgba(0,0,0,.04), transparent);
-    border-bottom: 1px solid var(--border);
-  }
-  .section-title {
-    margin: 0;
-    font-size: 20px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-title::after {
-    content: "";
-    flex: 1; height: 1px; margin-left: 12px; background: var(--border);
-  }
-  .section-content { padding: 22px; }
+/* Header */
+.header {
+  background: radial-gradient(1200px 500px at 10% -10%, var(--brand-3) 0%, transparent 60%),
+              linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: #fff;
+  padding: 48px 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.header h1 { margin: 0 0 8px; font-size: clamp(28px, 3.6vw, 42px); font-weight: 800; letter-spacing: .2px; }
+.header p { margin: 0; opacity: .9; }
+.header-actions { position: absolute; top: 16px; right: 16px; display: flex; gap: 8px; }
+.btn { background: rgba(255,255,255,.14); color: #fff; border: 1px solid rgba(255,255,255,.25); padding: 8px 12px; border-radius: 999px; cursor: pointer; backdrop-filter: blur(6px); transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); }
 
-  /* Student info / chips */
-  .student-info {
-    background: linear-gradient(180deg, rgba(16,185,129,.08), transparent);
-    border-left: 4px solid var(--success);
-    border-radius: var(--radius-sm);
-    padding: 16px 18px;
-  }
-  .info-grid {
-    display: grid; gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-  .info-item .info-label { font-weight: 600; color: var(--muted); font-size: 13px; }
-  .info-item .info-value {
-    margin-top: 6px; padding: 10px 12px;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px;
-  }
-  .chip {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
-    color: var(--brand-1); background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.2);
-  }
+/* Sections */
+.section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow); margin: 24px 0; overflow: hidden; }
+.section-header { padding: 18px 22px; background: linear-gradient(180deg, rgba(0,0,0,.04), transparent); border-bottom: 1px solid var(--border); position: relative; }
+.section-title { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+.section-title::after { content: ""; flex: 1; height: 1px; margin-left: 12px; background: var(--border); }
+.section-content { padding: 22px; }
 
-  /* Scope cards */
-  .scope-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
-  .scope-card {
-    background: linear-gradient(180deg, rgba(0,0,0,.03), transparent);
-    border: 1px solid var(--border);
-    border-radius: 14px; padding: 16px;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .scope-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-  .scope-card h4 { margin: 0 0 10px; font-size: 16px; }
-  .scope-card.in-scope { border-left: 4px solid var(--success); }
-  .scope-card.roadmap { border-left: 4px solid var(--brand-2); }
-  .scope-card.out-scope { border-left: 4px solid var(--danger); }
-  .placeholder { background: transparent; border: 0; padding: 0; color: var(--text); font-style: normal; }
+/* Student info / chips */
+.student-info { background: linear-gradient(180deg, rgba(16,185,129,.08), transparent); border-left: 4px solid var(--success); border-radius: var(--radius-sm); padding: 16px 18px; }
+.info-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.info-item .info-label { font-weight: 600; color: var(--muted); font-size: 13px; }
+.info-item .info-value { margin-top: 6px; padding: 10px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--brand-1); background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.2); }
 
-  /* Table */
-  .stakeholder-table {
-    width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .stakeholder-table thead th {
-    position: sticky; top: 0;
-    background: linear-gradient(180deg, rgba(21,94,99,.95), rgba(21,94,99,.9));
-    color: #fff; padding: 12px; text-align: left; font-size: 13px;
-  }
-  .stakeholder-table td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .stakeholder-table tbody tr:nth-child(odd) { background: rgba(0,0,0,.02); }
-  .stakeholder-table tbody tr:hover { background: rgba(26,188,156,.08); }
+/* Scope cards */
+.scope-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+.scope-card { background: linear-gradient(180deg, rgba(0,0,0,.03), transparent); border: 1px solid var(--border); border-radius: 14px; padding: 16px; transition: transform .15s ease, box-shadow .15s ease; }
+.scope-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.scope-card h4 { margin: 0 0 10px; font-size: 16px; }
+.scope-card.in-scope { border-left: 4px solid var(--success); }
+.scope-card.roadmap { border-left: 4px solid var(--brand-2); }
+.scope-card.out-scope { border-left: 4px solid var(--danger); }
+.placeholder { background: transparent; border: 0; padding: 0; color: var(--text); font-style: normal; }
 
-  /* Grid image */
-  .power-interest-grid img {
-    width: 100%; height: auto;
-    border-radius: 12px; border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-  }
-  .power-interest-grid h4 { text-align: center; margin: 0 0 12px; color: var(--muted); }
+/* Table */
+.stakeholder-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.stakeholder-table thead th { position: sticky; top: 0; background: linear-gradient(180deg, rgba(21,94,99,.95), rgba(21,94,99,.9)); color: #fff; padding: 12px; text-align: left; font-size: 13px; }
+.stakeholder-table td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
+.stakeholder-table tbody tr:nth-child(odd) { background: rgba(0,0,0,.02); }
+.stakeholder-table tbody tr:hover { background: rgba(26,188,156,.08); }
 
-  /* Inline lists */
-  ul { padding-left: 1.2rem; }
+/* Grid image */
+.power-interest-grid img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.power-interest-grid h4 { text-align: center; margin: 0 0 12px; color: var(--muted); }
 
-  /* Callouts */
-  .instructions {
-    background: linear-gradient(180deg, rgba(59,130,246,.12), transparent);
-    border: 1px dashed rgba(59,130,246,.35);
-    color: var(--text); border-radius: 12px; padding: 16px;
-  }
-  .completed-work {
-    background: linear-gradient(180deg, rgba(16,185,129,.1), transparent);
-    border: 1px solid rgba(16,185,129,.25);
-    border-radius: 12px; padding: 14px;
-  }
+/* Inline lists */
+ul { padding-left: 1.2rem; }
 
-  /* Print styles */
-  @media print {
-    .header-actions, #themeToggle { display: none !important; }
-    .header, .section { box-shadow: none !important; }
-    body { background: #fff; }
-  }
+/* Callouts */
+.instructions { background: linear-gradient(180deg, rgba(59,130,246,.12), transparent); border: 1px dashed rgba(59,130,246,.35); color: var(--text); border-radius: 12px; padding: 16px; }
+.completed-work { background: linear-gradient(180deg, rgba(16,185,129,.1), transparent); border: 1px solid rgba(16,185,129,.25); border-radius: 12px; padding: 14px; }
+
+/* Print styles */
+@media print { .header-actions, #themeToggle { display: none !important; } .header, .section { box-shadow: none !important; } body { background: #fff; } }
 
 .table-wrap { overflow-x: auto; border-radius: 12px; }
 @media print { .table-wrap { overflow: visible; } }
 .section { break-inside: avoid; page-break-inside: avoid; }
 .type-chip { box-shadow: 0 1px 0 rgba(0,0,0,.06); }
-    
+
 /* ===== Budget Table ===== */
-.budget-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  font-size: 13px;
-}
-.budget-table th, .budget-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-}
-.budget-table thead th {
-  background: linear-gradient(180deg, rgba(21,94,99,.95), rgba(21,94,99,.9));
-  color: #fff;
-  font-weight: 700;
-}
+.budget-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; font-size: 13px; }
+.budget-table th, .budget-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+.budget-table thead th { background: linear-gradient(180deg, rgba(21,94,99,.95), rgba(21,94,99,.9)); color: #fff; font-weight: 700; }
 
 /* category bands */
 .bt-band { font-weight: 700; }
@@ -274,46 +183,7 @@
 }
 
 /* print */
-@media print {
-  .budget-table { box-shadow: none; }
-}
-</style>
-<script>
-(function () {
-  const container = document.getElementById('wbs-tabs');
-  if (!container) return;
-  const tabs = [...container.querySelectorAll('[role="tab"]')];
-  const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
-
-  function activate(idx, pushHash=false) {
-    tabs.forEach((t,i)=> {
-      const on = i===idx;
-      t.setAttribute('aria-selected', on);
-      panels[i].hidden = !on;
-    });
-    if (pushHash) history.replaceState(null,'','#'+panels[idx].id);
-    tabs[idx].focus();
-  }
-
-  tabs.forEach((tab,i)=>{
-    tab.addEventListener('click',()=>activate(i,true));
-    tab.addEventListener('keydown',e=>{
-      const k=e.key;
-      let j=i;
-      if (k==='ArrowRight') j=(i+1)%tabs.length;
-      else if (k==='ArrowLeft') j=(i-1+tabs.length)%tabs.length;
-      else if (k==='Home') j=0;
-      else if (k==='End') j=tabs.length-1;
-      else return;
-      e.preventDefault(); activate(j,true);
-    });
-  });
-
-  // Open the tab from URL hash (e.g., #panel-d4)
-  const fromHash = panels.findIndex(p => '#'+p.id === location.hash);
-  activate(fromHash>=0 ? fromHash : 0);
-})();
-</script><style>
+@media print { .budget-table { box-shadow: none; } }
 /* ===== Modern layout with sticky TOC ===== */
 .layout {
   display: grid;
@@ -358,1222 +228,648 @@
 #toc nav a.active { background: linear-gradient(180deg, rgba(21,94,99,.12), transparent); color: var(--brand-1); border-color: var(--border); }
 .toc-controls { display:flex; gap:8px; margin-top:4px; }
 .btn.small { padding: 6px 10px; font-size: 12px; }
-
-/* ===== Collapsible sections ===== */
-.section-header { position: relative; }
-.collapse-toggle {
-  position: absolute;
-  right: 16px; top: 50%; transform: translateY(-50%);
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 10px;
-  border: 1px solid var(--border); background: var(--surface); cursor: pointer;
-}
-.collapse-toggle:hover { background: rgba(0,0,0,.04); }
-.collapse-toggle .chevron {
-  width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent;
-  border-top: 8px solid var(--text);
-  transition: transform .2s ease;
-}
-.collapse-toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
-
-/* Animate show/hide */
-.section-content[hidden] { display: none; }
-.section-content { animation: fadeSlide .2s ease; }
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Make header tabs area not overlap with sticky TOC */
-.container { margin-top: 12px; }
-</style></head>
+</style>
+</head>
 <body class="dark">
-<div class="layout"><aside id="toc"><div class="toc-header"><h3>On this page</h3><input aria-label="Filter sections" id="tocSearch" placeholder="Filter sections…" type="search"></div><div class="toc-controls"><button class="btn small" id="expandAll">Expand all</button><button class="btn small" id="collapseAll">Collapse all</button></div><nav><ul><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#1-project-goal-description" class="active">📋 1. Project Goal &amp; Description</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#2-vision-mission-strategy-alignment" class="">🎯 2. Vision, Mission &amp; Strategy Alignment</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#3-business-case-justification" class="">💼 3. Business Case &amp; Justification</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#4-high-level-scope" class="">📏 4. High-Level Scope</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#5-stakeholder-register" class="">👥 5. Stakeholder Register</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#6-deliverables" class="">📦 6. Deliverables</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#wbs">🧩Work Breakdown Structure (WBS)</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#budget">💵 8. Budget &amp; Cost Estimate</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#methodology">🧭 Project Methodology (Hybrid: Incremental + Iterative)</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#release-schedule">📊 Multiple Release Schedule</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#tool-selection">🛠 Tool Selection &amp; Setup</a></li><li><a href="file:///C:/Users/Fernando/Downloads/ChatGPT_merged_fixed.html#tool-screenshot">📷 Project Tool Screenshot</a></li></ul></nav></aside><div class="container">
-<div class="header"><div class="header-actions"><button class="btn" id="themeToggle">🌙 Theme</button><button class="btn" onclick="window.print()">🖨️ Print</button></div>
-<h1>From Data to Decisions: Google Data Analytics Professional Certificate</h1>
-<p>Project Charter - Managing IT Projects Course</p>
-</div>
-<div class="content">
-<!-- Student Information -->
-<div class="student-info">
-<h3>Student Information</h3>
-<div class="info-grid">
-<div class="info-item">
-<div class="info-label">Student Name:</div>
-<div class="info-value">Fernando Olvera</div>
-</div>
-<div class="info-item">
-<div class="info-label">Course:</div>
-<div class="info-value">Managing IT Projects</div>
-</div>
-<div class="info-item">
-<div class="info-label">Semester:</div>
-<div class="info-value">Fall 2025</div>
-</div>
-</div>
-</div>
-<!-- Section 1: Project Title & Description -->
-<div class="section" id="1-project-goal-description">
-<div class="section-header">
-<h2 class="section-title">📋 1. Project Goal &amp; Description</h2>
-<button aria-controls="1-project-goal-description-content" aria-expanded="true" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" id="1-project-goal-description-content">
-<p><strong>Project Goal:</strong> Develop foundational data analytics competencies and create professional artifacts demonstrating job readiness for entry-level analyst positions.</p>
-<p>This semester I will earn the Google Data Analytics Professional Certificate while building an applied analytics project that demonstrates practical skills in data preparation, analysis, visualization, and insight communication. Deliverables include the certification credential, a comprehensive case study showcasing end-to-end analytical methodology, a professional dashboard, and an integrated portfolio that documents competencies gained and maps them to industry requirements.</p>
-</div>
-</div>
-<!-- Section 2: Vision, Mission & Strategy Alignment -->
-<div class="section" id="2-vision-mission-strategy-alignment">
-<div class="section-header">
-<h2 class="section-title">🎯 2. Vision, Mission &amp; Strategy Alignment</h2>
-<button aria-controls="2-vision-mission-strategy-alignment-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" id="2-vision-mission-strategy-alignment-content" hidden="">
-<h4>Personal Mission Connection:</h4>
-<p>My mission is to grow as a technology professional by using data and digital tools to solve problems, create efficiency, and make information more accessible to others. I am driven by curiosity, learning, and the desire to make a positive impact through my work.</p>
-<h4>Vision Alignment:</h4>
-<p>In 3–5 years, I see myself working as a data analyst or cybersecurity analyst, applying my skills in real-world settings to support organizations while continuing to expand my expertise. My vision is to build a career where I am constantly learning, contributing to meaningful projects, and setting the foundation for long-term growth in the tech industry.</p>
-<h4>Strategic Goal Support:</h4>
-<p>Directly supports my 12‑month goals to (1) complete an industry certification demonstrating technical proficiency, (2) assemble a comprehensive analytics portfolio showcasing practical competencies, and (3) improve professional communication through clear, insight‑driven analysis and presentation. This project creates a foundation for future job search activities by building demonstrable skills that align with entry-level analyst requirements.</p>
-</div>
-</div>
-<!-- Section 3: Business Case -->
-<div class="section" id="3-business-case-justification">
-<div class="section-header">
-<h2 class="section-title">💼 3. Business Case &amp; Justification</h2>
-<button aria-controls="3-business-case-justification-content" aria-expanded="true" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" id="3-business-case-justification-content">
-<h4>Professional Value:</h4>
-<ul>
-<li>Establishes a recognized industry credential (Google Data Analytics Professional Certificate) demonstrating technical proficiency.</li>
-<li>Develops practical analytics competencies including data preparation, analysis, visualization, and insight communication.</li>
-<li>Creates portfolio artifacts showcasing end-to-end analytical methodology and professional presentation skills.</li>
-<li>Builds confidence discussing real-world data scenarios and technical processes in professional contexts.</li>
-<li>Provides foundation for future job search by demonstrating concrete, applicable skills.</li>
-</ul>
-<h4>Personal Value:</h4>
-<ul>
-<li>Builds confidence in working with digital data and analytical tools.</li>
-<li>Provides a structured and measurable milestone for professional development.</li>
-<li>Offers personal satisfaction of achieving both a certification and demonstrable competency in one semester.</li>
-<li>Develops discipline through time management and systematic skill building.</li>
-</ul>
-<h4>Learning Outcomes:</h4>
-<ul>
-<li>Gain hands-on practice with data analytics concepts: data cleaning, statistical analysis, visualization, and storytelling.</li>
-<li>Improve ability to communicate insights professionally through written reports and visual presentations.</li>
-<li>Strengthen project management skills by planning and executing deliverables with defined timelines.</li>
-<li>Develop competency documentation skills transferable to future professional development.</li>
-</ul>
-</div>
-</div>
-<!-- Section 4: High-Level Scope -->
-<div class="section" id="4-high-level-scope">
-<div class="section-header">
-<h2 class="section-title">📏 4. High-Level Scope</h2>
-<button aria-controls="4-high-level-scope-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="4-high-level-scope-content">
-<div class="scope-grid">
-<div class="scope-card in-scope">
-<h4>✅ In Scope for Semester Project</h4>
-<div class="placeholder">
-<ul>
-<li>Complete Google Data Analytics Professional Certificate and earn certification credential.</li>
-<li>Develop and document practical competencies in data preparation, analysis, visualization, and insight communication.</li>
-<li>Create a comprehensive applied analytics project demonstrating end-to-end methodology using real dataset.</li>
-<li>Build a professional visual dashboard showcasing technical proficiency and communication skills.</li>
-<li>Integrate all deliverables into a professional portfolio that documents competencies and demonstrates job readiness.</li>
-</ul>
-</div>
-</div>
-<div class="scope-card roadmap">
-<h4>🗺️ Roadmap Items (≤6 Months)</h4>
-<div class="placeholder">
-<ul>
-<li>Add a second dataset analysis to demonstrate broader analytical competencies.</li>
-<li>Build additional visualization project in a different tool to expand technical skills.</li>
-<li>Enhance the portfolio site with advanced features and improved professional presentation.</li>
-<li>Pursue a complementary certification (e.g., Tableau, Power BI, or SQL) to broaden skill set.</li>
-<li>Begin job search activities leveraging completed portfolio and certification credentials.</li>
-</ul>
-</div>
-</div>
-<div class="scope-card out-scope">
-<h4>❌ Out of Scope</h4>
-<div class="placeholder">
-<ul>
-<li>Pursuing multiple advanced certifications beyond Google Data Analytics during this semester.</li>
-<li>Developing commercial analytics products or enterprise-level platforms.</li>
-<li>Creating multiple portfolio projects outside the defined applied project framework.</li>
-<li>Active job searching, interviewing, or employment acquisition during the semester.</li>
-<li>Ongoing long-term maintenance of portfolio site beyond initial publication.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Section 5: Stakeholder Register -->
-<div class="section" id="5-stakeholder-register">
-<div class="section-header">
-<h2 class="section-title">👥 5. Stakeholder Register</h2>
-<button aria-controls="5-stakeholder-register-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="5-stakeholder-register-content">
-<div class="table-wrap"><table class="stakeholder-table">
-<thead>
-<tr>
-<th>Stakeholder</th>
-<th>Category</th>
-<th>Role/Interest</th>
-<th>Power</th>
-<th>Interest</th>
-<th>Quadrant</th>
-<th>Engagement Strategy</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Instructor</td>
-<td>Internal</td>
-<td>Course evaluator, sets project expectations and grading criteria</td>
-<td>High</td>
-<td>High</td>
-<td>Manage Closely</td>
-<td>Provide regular updates on progress and deliverables; seek feedback to stay aligned with course expectations and competency development goals.</td>
-</tr>
-<tr>
-<td>Classmates/Peers</td>
-<td>Internal</td>
-<td>Provide peer feedback and collaboration in skill development discussions</td>
-<td>Low</td>
-<td>Medium</td>
-<td>Keep Informed</td>
-<td>Share project progress in class discussions; encourage peer feedback for skill improvement and competency validation.</td>
-</tr>
-<tr>
-<td>Academic Advisor</td>
-<td>Internal</td>
-<td>Guides academic and career planning alignment</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Keep Informed</td>
-<td>Inform about competency development progress; seek advice on aligning with long-term academic and career goals.</td>
-</tr>
-<tr>
-<td>Future Employers / Recruiters</td>
-<td>External</td>
-<td>Potential evaluators of portfolio and certification for future hiring decisions</td>
-<td>High</td>
-<td>Medium</td>
-<td>Keep Informed</td>
-<td>Build portfolio artifacts that demonstrate clear competencies and professional presentation aligned with industry standards; prepare foundation for future job search activities.</td>
-</tr>
-<tr>
-<td>Google (Certification Provider)</td>
-<td>External</td>
-<td>Provides certification framework and validates competency achievement</td>
-<td>High</td>
-<td>Low</td>
-<td>Keep Satisfied</td>
-<td>Meet certification requirements and complete all assessments; no ongoing engagement needed beyond compliance.</td>
-</tr>
-<tr>
-<td>Career Services / Internship Office</td>
-<td>Internal</td>
-<td>Supports future career readiness and job placement activities</td>
-<td>Medium</td>
-<td>High</td>
-<td>Manage Closely</td>
-<td>Share certification and competency documentation outcomes to leverage for future internship and job opportunities.</td>
-</tr>
-<tr>
-<td>Family / Personal Support Network</td>
-<td>External</td>
-<td>Provides encouragement and accountability for skill development</td>
-<td>Low</td>
-<td>Medium</td>
-<td>Monitor</td>
-<td>Provide occasional updates for encouragement and motivation; not deeply involved in technical project execution.</td>
-</tr>
-<tr>
-<td>LinkedIn / GitHub Community</td>
-<td>External</td>
-<td>Professional networking platform for showcasing competencies</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Keep Informed</td>
-<td>Share portfolio and certification results for professional visibility and networking; document competency development journey.</td>
-</tr>
-<tr>
-<td>University IT / Lab Resources</td>
-<td>Internal</td>
-<td>Provides technical tools and software access for skill development</td>
-<td>Medium</td>
-<td>Low</td>
-<td>Monitor</td>
-<td>Use resources as needed for competency development; report issues only if they affect project progress.</td>
-</tr>
-</tbody>
-</table>
-<div class="power-interest-grid">
-<h4>Power-Interest Grid Visualization</h4>
-<img alt="Power-Interest Grid" src="./index_files/Matrix.png" style="max-width:100%; border: 2px solid #ccc; border-radius: 10px;">
-</div>
-</div>
-</div>
-</div>
-<!-- Section 6: Deliverables & Definition of Done -->
-<div class="section" id="6-deliverables">
-<div class="section-header">
-<h2 class="section-title">📦 6. Deliverables</h2>
-<button aria-controls="6-deliverables-content" aria-expanded="true" class="collapse-toggle"><span class="chevron"></span></button></div>
-<style>.type-chip {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-}
-.type-tangible { background: #28a745; }   /* green */
-.type-intangible { background: #dc3545; } /* red */
-.type-outcome { background: #007bff; }    /* blue */</style>
-<div class="section-content" id="6-deliverables-content">
-<table class="stakeholder-table">
-<thead>
-<tr>
-<th>Deliverable</th>
-<th>Type</th>
-<th>SMART Description</th>
-<th>Definition of Done</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Google Data Analytics Professional Certificate</td>
-<td><span class="type-chip type-tangible">Tangible</span></td>
-<td>Successfully complete all 8 courses in the Google Data Analytics Professional Certificate on Coursera by Week 15, demonstrating technical proficiency in data analytics fundamentals.</td>
-<td>Certificate of completion issued by Coursera/Google; badges for all 8 courses earned; competency validation documented; proof uploaded to portfolio with skills mapping.</td>
-</tr>
-<tr>
-<td>Applied Analytics Project Report (Case Study)</td>
-<td><span class="type-chip type-tangible">Tangible</span></td>
-<td>Create a comprehensive case study demonstrating end-to-end analytics methodology including data preparation, analysis, and insight generation using a real dataset by Week 13.</td>
-<td>Case study complete with clear objectives, documented methodology, analysis results, and actionable insights; demonstrates proficiency in data analytics process; final version uploaded to portfolio with professional presentation.</td>
-</tr>
-<tr>
-<td>Visual Dashboard</td>
-<td><span class="type-chip type-tangible">Tangible</span></td>
-<td>Build a professional dashboard using Tableau, Excel, or Google Data Studio to present key metrics, trends, and insights by Week 14, showcasing technical and communication competencies.</td>
-<td>Dashboard file or shareable link available; clearly labeled and professionally organized; demonstrates technical proficiency and insight communication; linked in portfolio with competency documentation.</td>
-</tr>
-<tr>
-<td>Portfolio Integration</td>
-<td><span class="type-chip type-outcome">Outcome</span></td>
-<td>Publish a professional portfolio site documenting competencies gained and demonstrating job readiness through integrated presentation of all deliverables by Week 15.</td>
-<td>Portfolio site live and publicly accessible; all deliverables integrated with professional presentation; includes competency documentation mapping skills gained to industry requirements; demonstrates readiness for future job search activities.</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="section" id="wbs">
-<div class="section-header">
-<h2 class="section-title">🧩Work Breakdown Structure (WBS)</h2>
-<button aria-controls="wbs-tabs" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content tabs" data-tabs="" hidden="" id="wbs-tabs">
-<div aria-label="WBS Deliverables" class="tablist sticky" role="tablist">
-<button aria-controls="panel-d1" aria-selected="true" id="tab-d1" role="tab">Certification</button>
-<button aria-controls="panel-d2" aria-selected="false" id="tab-d2" role="tab">Case Study</button>
-<button aria-controls="panel-d3" aria-selected="false" id="tab-d3" role="tab">Dashboard</button>
-<button aria-controls="panel-d4" aria-selected="false" id="tab-d4" role="tab">Portfolio</button>
-</div>
-<div aria-labelledby="tab-d1" class="tabpanel" id="panel-d1" role="tabpanel">
-<h3 style="margin-top:0">Google Data Analytics Professional Certificate</h3>
-<div class="table-wrap">
-<table class="wbs-table">
-<thead>
-<tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="wbs-id">1.0</td>
-<td>Deliverable</td>
-<td>Google Data Analytics Professional Certificate</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.1</td>
-<td>Work Package</td>
-<td>Course 1: Foundations of Data, Data, Everywhere</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.1.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.1.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>3.0</td>
-<td>1.1.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.1.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>2.0</td>
-<td>1.1.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.1.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.1.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.2</td>
-<td>Work Package</td>
-<td>Course 2: Ask Questions to Make Data-Driven Decisions</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.2.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.1.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.2.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>3.0</td>
-<td>1.2.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.2.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>2.0</td>
-<td>1.2.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.2.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.2.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.3</td>
-<td>Work Package</td>
-<td>Course 3: Prepare Data for Exploration</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.3.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.2.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.3.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>4.0</td>
-<td>1.3.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.3.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>3.0</td>
-<td>1.3.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.3.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.3.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.4</td>
-<td>Work Package</td>
-<td>Course 4: Process Data from Dirty to Clean</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.4.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.3.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.4.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>4.0</td>
-<td>1.4.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.4.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>3.0</td>
-<td>1.4.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.4.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.4.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.5</td>
-<td>Work Package</td>
-<td>Course 5: Analyze Data to Answer Questions</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.5.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.4.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.5.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>5.0</td>
-<td>1.5.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.5.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>3.0</td>
-<td>1.5.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.5.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.5.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.6</td>
-<td>Work Package</td>
-<td>Course 6: Share Data Through the Art of Visualization</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.6.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.5.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.6.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>5.0</td>
-<td>1.6.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.6.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>3.0</td>
-<td>1.6.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.6.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.6.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.7</td>
-<td>Work Package</td>
-<td>Course 7: Data Analysis with R Programming</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.7.1</td>
-<td>Task</td>
-<td>Review course modules and syllabus</td>
-<td>1.0</td>
-<td>1.6.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.7.2</td>
-<td>Task</td>
-<td>Complete all video lessons</td>
-<td>6.0</td>
-<td>1.7.1 - Review course modules and syllabus</td>
-</tr>
-<tr>
-<td class="wbs-id">1.7.3</td>
-<td>Task</td>
-<td>Submit quizzes and assignments</td>
-<td>4.0</td>
-<td>1.7.2 - Complete all video lessons</td>
-</tr>
-<tr>
-<td class="wbs-id">1.7.4</td>
-<td>Task</td>
-<td>Earn course badge</td>
-<td>0.5</td>
-<td>1.7.3 - Submit quizzes and assignments</td>
-</tr>
-<tr>
-<td class="wbs-id">1.8</td>
-<td>Work Package</td>
-<td>Course 8: Google Data Analytics Capstone Project</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">1.8.1</td>
-<td>Task</td>
-<td>Review project requirements</td>
-<td>1.0</td>
-<td>1.7.4 - Earn course badge</td>
-</tr>
-<tr>
-<td class="wbs-id">1.8.2</td>
-<td>Task</td>
-<td>Complete capstone project work</td>
-<td>7.0</td>
-<td>1.8.1 - Review project requirements</td>
-</tr>
-<tr>
-<td class="wbs-id">1.8.3</td>
-<td>Task</td>
-<td>Submit final project</td>
-<td>2.0</td>
-<td>1.8.2 - Complete capstone project work</td>
-</tr>
-<tr>
-<td class="wbs-id">1.8.4</td>
-<td>Task</td>
-<td>Earn final certificate</td>
-<td>0.5</td>
-<td>1.8.3 - Submit final project</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div aria-labelledby="tab-d2" class="tabpanel" hidden="" id="panel-d2" role="tabpanel">
-<h3 style="margin-top:0">Applied Analytics Project Report (Case Study)</h3>
-<div class="table-wrap">
-<table class="wbs-table">
-<thead>
-<tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="wbs-id">2.0</td>
-<td>Deliverable</td>
-<td>Applied Analytics Project Report (Case Study)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.1</td>
-<td>Work Package</td>
-<td>Project Setup Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.1.1</td>
-<td>Task</td>
-<td>Select dataset for analysis</td>
-<td>2.0</td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.1.2</td>
-<td>Task</td>
-<td>Define project objectives and research questions</td>
-<td>2.0</td>
-<td>2.1.1 - Select dataset for analysis</td>
-</tr>
-<tr>
-<td class="wbs-id">2.1.3</td>
-<td>Task</td>
-<td>Develop project outline (sections and structure)</td>
-<td>2.0</td>
-<td>2.1.2 - Define project objectives and research questions</td>
-</tr>
-<tr>
-<td class="wbs-id">2.2</td>
-<td>Work Package</td>
-<td>Analysis &amp; Development Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.2.1</td>
-<td>Task</td>
-<td>Clean and prepare dataset</td>
-<td>3.0</td>
-<td>2.1.3 - Develop project outline</td>
-</tr>
-<tr>
-<td class="wbs-id">2.2.2</td>
-<td>Task</td>
-<td>Conduct data analysis (summary statistics, queries, transformations)</td>
-<td>4.0</td>
-<td>2.2.1 - Clean and prepare dataset</td>
-</tr>
-<tr>
-<td class="wbs-id">2.2.3</td>
-<td>Task</td>
-<td>Generate supporting visuals (charts, tables, dashboards)</td>
-<td>3.0</td>
-<td>2.2.2 - Conduct data analysis</td>
-</tr>
-<tr>
-<td class="wbs-id">2.2.4</td>
-<td>Task</td>
-<td>Document methods and analysis process</td>
-<td>2.0</td>
-<td>2.2.3 - Generate supporting visuals</td>
-</tr>
-<tr>
-<td class="wbs-id">2.3</td>
-<td>Work Package</td>
-<td>Report Writing Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.3.1</td>
-<td>Task</td>
-<td>Draft case study (objectives, methods, findings, insights)</td>
-<td>4.0</td>
-<td>2.2.4 - Document methods and analysis process</td>
-</tr>
-<tr>
-<td class="wbs-id">2.3.2</td>
-<td>Task</td>
-<td>Revise based on feedback (self or peer review)</td>
-<td>2.0</td>
-<td>2.3.1 - Draft case study</td>
-</tr>
-<tr>
-<td class="wbs-id">2.3.3</td>
-<td>Task</td>
-<td>Finalize report and proofread</td>
-<td>2.0</td>
-<td>2.3.2 - Revise based on feedback</td>
-</tr>
-<tr>
-<td class="wbs-id">2.4</td>
-<td>Work Package</td>
-<td>Integration Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">2.4.1</td>
-<td>Task</td>
-<td>Upload final report to portfolio repository</td>
-<td>1.0</td>
-<td>2.3.3 - Finalize report and proofread</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div aria-labelledby="tab-d3" class="tabpanel" hidden="" id="panel-d3" role="tabpanel">
-<h3 style="margin-top:0">Visual Dashboard</h3>
-<div class="table-wrap">
-<table class="wbs-table">
-<thead>
-<tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="wbs-id">3.0</td>
-<td>Deliverable</td>
-<td>Visual Dashboard</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.1</td>
-<td>Work Package</td>
-<td>Dashboard Planning Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.1.1</td>
-<td>Task</td>
-<td>Define dashboard objectives and KPIs</td>
-<td>2.0</td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.1.2</td>
-<td>Task</td>
-<td>Select tool (Tableau, Excel, or Google Data Studio)</td>
-<td>1.0</td>
-<td>3.1.1 - Define dashboard objectives and KPIs</td>
-</tr>
-<tr>
-<td class="wbs-id">3.1.3</td>
-<td>Task</td>
-<td>Design wireframe/mockup of dashboard layout</td>
-<td>2.0</td>
-<td>3.1.2 - Select tool</td>
-</tr>
-<tr>
-<td class="wbs-id">3.2</td>
-<td>Work Package</td>
-<td>Data Preparation Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.2.1</td>
-<td>Task</td>
-<td>Gather and clean dataset for dashboard</td>
-<td>3.0</td>
-<td>3.1.3 - Design wireframe/mockup</td>
-</tr>
-<tr>
-<td class="wbs-id">3.2.2</td>
-<td>Task</td>
-<td>Structure dataset for chosen tool (formatting, joins, filters)</td>
-<td>2.0</td>
-<td>3.2.1 - Gather and clean dataset</td>
-</tr>
-<tr>
-<td class="wbs-id">3.3</td>
-<td>Work Package</td>
-<td>Dashboard Development Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.3.1</td>
-<td>Task</td>
-<td>Create dashboard structure (charts, tables, filters)</td>
-<td>4.0</td>
-<td>3.2.2 - Structure dataset</td>
-</tr>
-<tr>
-<td class="wbs-id">3.3.2</td>
-<td>Task</td>
-<td>Add interactivity and formatting (titles, labels, colors)</td>
-<td>2.0</td>
-<td>3.3.1 - Create dashboard structure</td>
-</tr>
-<tr>
-<td class="wbs-id">3.3.3</td>
-<td>Task</td>
-<td>Review dashboard for accuracy and clarity</td>
-<td>2.0</td>
-<td>3.3.2 - Add interactivity and formatting</td>
-</tr>
-<tr>
-<td class="wbs-id">3.4</td>
-<td>Work Package</td>
-<td>Integration Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">3.4.1</td>
-<td>Task</td>
-<td>Publish dashboard (share link or export file)</td>
-<td>1.0</td>
-<td>3.3.3 - Review dashboard</td>
-</tr>
-<tr>
-<td class="wbs-id">3.4.2</td>
-<td>Task</td>
-<td>Upload/publish dashboard in portfolio</td>
-<td>1.0</td>
-<td>3.4.1 - Publish dashboard</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div aria-labelledby="tab-d4" class="tabpanel" hidden="" id="panel-d4" role="tabpanel">
-<h3 style="margin-top:0">Portfolio Integration</h3>
-<div class="table-wrap">
-<table class="wbs-table">
-<thead>
-<tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="wbs-id">4.0</td>
-<td>Deliverable</td>
-<td>Portfolio Integration</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">4.1</td>
-<td>Work Package</td>
-<td>Setup Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">4.1.1</td>
-<td>Task</td>
-<td>Confirm hosting platform (GitHub Pages or equivalent)</td>
-<td>1.0</td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">4.1.2</td>
-<td>Task</td>
-<td>Prepare portfolio structure (sections for each deliverable)</td>
-<td>2.0</td>
-<td>4.1.1 - Confirm hosting platform</td>
-</tr>
-<tr>
-<td class="wbs-id">4.2</td>
-<td>Work Package</td>
-<td>Content Integration Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">4.2.1</td>
-<td>Task</td>
-<td>Add Deliverable 1: Certificate proof (PDF/badge)</td>
-<td>1.0</td>
-<td>4.1.2 - Prepare portfolio structure</td>
-</tr>
-<tr>
-<td class="wbs-id">4.2.2</td>
-<td>Task</td>
-<td>Add Deliverable 2: Applied analytics project (PDF or doc link)</td>
-<td>1.0</td>
-<td>4.1.2 - Prepare portfolio structure</td>
-</tr>
-<tr>
-<td class="wbs-id">4.2.3</td>
-<td>Task</td>
-<td>Add Deliverable 3: Dashboard link or embedded file</td>
-<td>2.0</td>
-<td>4.1.2 - Prepare portfolio structure</td>
-</tr>
-<tr>
-<td class="wbs-id">4.2.4</td>
-<td>Task</td>
-<td>Add competency documentation and skills mapping</td>
-<td>2.0</td>
-<td>4.1.2 - Prepare portfolio structure</td>
-</tr>
-<tr>
-<td class="wbs-id">4.3</td>
-<td>Work Package</td>
-<td>Finalization Work Package</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="wbs-id">4.3.1</td>
-<td>Task</td>
-<td>Review site for broken links and formatting consistency</td>
-<td>2.0</td>
-<td>4.2.4 - Add competency documentation</td>
-</tr>
-<tr>
-<td class="wbs-id">4.3.2</td>
-<td>Task</td>
-<td>Publish final portfolio site</td>
-<td>1.0</td>
-<td>4.3.1 - Review site</td>
-</tr>
-<tr>
-<td class="wbs-id">4.3.3</td>
-<td>Task</td>
-<td>Submit portfolio link to professor</td>
-<td>0.5</td>
-<td>4.3.2 - Publish final portfolio site</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<!-- Section 8: Budget & Cost Estimate --><div class="section" id="budget">
-<div class="section-header">
-<h2 class="section-title">💵 8. Budget &amp; Cost Estimate</h2>
-<button aria-controls="budget-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="budget-content">
-<div class="table-wrap">
-<table class="budget-table" id="budgetTable">
-<thead>
-<tr>
-<th>Cost Item</th>
-<th>Quantity/Hours</th>
-<th>Rate/Price</th>
-<th class="text-right">Total Cost</th>
-</tr>
-</thead>
-<tbody>
-<!-- LABOR -->
-<tr class="bt-band bt-labor"><td colspan="4">👨‍💻 LABOR COSTS</td></tr>
-<tr data-type="labor">
-<td>Data Analyst / Student Researcher</td>
-<td contenteditable="true" data-qty="">730</td>
-<td contenteditable="true" data-rate="">$25/hr</td>
-<td class="text-right" data-line="">$18,250</td>
-</tr>
-<tr data-type="labor">
-<td>Dashboard Designer</td>
-<td contenteditable="true" data-qty="">120</td>
-<td contenteditable="true" data-rate="">$30/hr</td>
-<td class="text-right" data-line="">$3,600</td>
-</tr>
-<tr data-type="labor">
-<td>Project Manager</td>
-<td contenteditable="true" data-qty="">74</td>
-<td contenteditable="true" data-rate="">$60/hr</td>
-<td class="text-right" data-line="">$4,440</td>
-</tr>
-<tr class="bt-subtotal">
-<td colspan="3"><strong>LABOR SUBTOTAL</strong></td>
-<td class="text-right" id="laborSubtotal">$26,290</td>
-</tr>
-<!-- EQUIPMENT/SOFTWARE -->
-<tr class="bt-band bt-software"><td colspan="4">💻 EQUIPMENT / SOFTWARE COSTS</td></tr>
-<tr data-type="fixed">
-<td>Coursera (Google DA Certificate, 4 months)</td>
-<td contenteditable="true" data-qty="">4 months</td>
-<td contenteditable="true" data-rate="">$39/month</td>
-<td class="text-right" data-line="">$156</td>
-</tr>
-<tr data-type="fixed">
-<td>Tableau Public, Excel (Student), Looker Studio</td>
-<td contenteditable="true" data-qty="">N/A</td>
-<td class="text-right" data-line="">$0</td>
-</tr>
-<tr class="bt-subtotal">
-<td colspan="3"><strong>SERVICES SUBTOTAL</strong></td>
-<td class="text-right" id="svcSubtotal">$0</td>
-</tr>
-<!-- TOTALS -->
-<tr class="bt-subtotal">
-<td colspan="3"><strong>SUBTOTAL DIRECT COSTS</strong></td>
-<td class="text-right" id="directSubtotal">$26,671</td>
-</tr>
-<tr class="bt-subtotal">
-<td>Contingency Reserve</td>
-<td contenteditable="true" id="contPct">20%</td>
-<td class="muted">Applied to direct subtotal</td>
-<td class="text-right" id="contValue">$5,334</td>
-</tr>
-<tr class="bt-total">
-<td colspan="3"><strong>💰 TOTAL PROJECT BUDGET</strong></td>
-<td class="text-right" id="grandTotal">$32,005</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<!-- Section: Project Methodology -->
-<div class="section" id="methodology">
-<div class="section-header">
-<h2 class="section-title">🧭 Project Methodology (Hybrid: Incremental + Iterative)</h2>
-<button aria-controls="methodology-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="methodology-content">
-<p><strong>Requirements:</strong> Deliverables are well-defined (certificate, applied project, dashboard, portfolio), but dataset choice, dashboard design, and competency documentation still require iteration and feedback.</p>
-<p><strong>Delivery Cadence:</strong> To reduce risk, the project is divided into three major releases instead of one final delivery.</p>
-<ul>
-<li><strong>Release 1 (Week 5):</strong> Certification progress + competency framework setup</li>
-<li><strong>Release 2 (Week 10):</strong> Applied project draft + dashboard prototype</li>
-<li><strong>Release 3 (Week 14):</strong> Completed certificate + final deliverables + competency documentation</li>
-</ul>
-<p><strong>Approach:</strong></p>
-<ul>
-<li><strong>Predictive:</strong> Applied to certification since course modules are fixed and structured.</li>
-<li><strong>Iterative:</strong> Used for applied project and dashboard to refine through feedback cycles.</li>
-<li><strong>Incremental:</strong> Portfolio and competency documentation built up progressively, finalized at semester end.</li>
-</ul>
-<p><strong>Why Hybrid?</strong> This approach balances predictability with adaptability—ideal for a semester project that combines fixed requirements (certification) with evolving creative elements (competency demonstration).</p>
-</div>
-</div>
-<!-- Section: Release Schedule Diagram -->
-<div class="section" id="release-schedule">
-<div class="section-header">
-<h2 class="section-title">📊 Multiple Release Schedule</h2>
-<button aria-controls="release-schedule-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="release-schedule-content">
-<div class="schedule" style="display:flex;justify-content:center;align-items:flex-start;gap:40px;flex-wrap:wrap;">
-<div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
-<div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
-<h3 style="margin:0;color:#003366;text-align:center;">Release 1</h3>
-<p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 5–7</p>
-<ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
-<li>Begin Google DA Certificate (Courses 1–2)</li>
-<li>Project charter + dataset selection</li>
-<li>Competency framework setup</li>
-</ul>
-</div>
-<div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
-<div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
-<div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
-<h3 style="margin:0;color:#003366;text-align:center;">Release 2</h3>
-<p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 8–10</p>
-<ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
-<li>Continue Google DA Certificate (Courses 3–5)</li>
-<li>Full draft of Applied Analytics Project</li>
-<li>Dashboard prototype (Tableau / Looker Studio)</li>
-</ul>
-</div>
-<div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
-<div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
-<div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
-<h3 style="margin:0;color:#003366;text-align:center;">Release 3</h3>
-<p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 11–14</p>
-<ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
-<li>Finish Google DA Certificate (Courses 6–8)</li>
-<li>Finalize dashboard and applied project</li>
-<li>Publish portfolio site with competency documentation</li>
-<li>Final project submission</li>
-</ul>
-</div>
-</div>
-<div class="legend" style="margin-top:30px;font-size:14px;color:#333;text-align:center;">
-<strong>Delivery:</strong> Every 3–4 weeks | <strong>Feedback:</strong> After each release
+<div class="layout">
+  <aside id="toc">
+    <div class="toc-header">
+      <h3>On this page</h3>
+      <input id="tocSearch" type="search" aria-label="Filter sections" placeholder="Filter sections…">
     </div>
-</div>
-</div>
-<!-- Section: Tool Selection & Setup -->
-<div class="section" id="tool-selection">
-<div class="section-header">
-<h2 class="section-title">🛠 Tool Selection &amp; Setup</h2>
-<button aria-controls="tool-selection-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="tool-selection-content">
-<h4>Tools Explored</h4>
-<ul>
-<li><strong>Microsoft Project</strong> → Strong for predictive and hybrid; detailed scheduling/reporting, but heavy and paid-only.</li>
-<li><strong>Trello</strong> → Simple, card-based Kanban; flexible for adaptive/hybrid but lacks advanced dependencies/reporting.</li>
-<li><strong>Jira</strong> → Agile-oriented with Scrum/Kanban boards, backlog management, and sprint planning; supports Hybrid with customizable workflows.</li>
-</ul>
-<h4>Final Choice: <span class="chip">Jira</span></h4>
-<p>Jira supports Hybrid methodology by enabling structured releases and milestones while using iterative sprint cycles for tasks like competency documentation and dashboard refinements.</p>
-<ul>
-<li>More flexible than Microsoft Project</li>
-<li>Stronger than Trello in backlog management, reporting, and sprint tools</li>
-<li>Free plan sufficient for semester project</li>
-</ul>
-<h4>Key Features Supporting My Project</h4>
-<ul>
-<li>Scrum/Kanban boards → Organize work into iterations and track progress visually.</li>
-<li>Backlog management → Prioritize tasks and schedule them into sprints/releases.</li>
-<li>Sprint planning &amp; reporting → Align with Hybrid iterative feedback cycles.</li>
-<li>Customizable workflows → Map deliverables (certification, applied project, dashboard, portfolio) into phases with feedback loops.</li>
-</ul>
-<h4>Project Structure (Hybrid)</h4>
-<p><strong>Releases (Incremental):</strong></p>
-<ul>
-<li><strong>R1 (Weeks 5–7):</strong> Courses 1–2, dataset selection, competency framework</li>
-<li><strong>R2 (Weeks 8–10):</strong> Courses 3–5, applied project draft, dashboard prototype</li>
-<li><strong>R3 (Weeks 11–14):</strong> Courses 6–8, dashboard refinement, portfolio integration, final submission</li>
-</ul>
-<p><strong>Iterations (Iterative):</strong> Each release ends with a feedback loop (instructor/peer review). Backlog items refined across sprints.</p>
-<h4>Dependencies</h4>
-<ul>
-<li>Dataset selection → must be completed before drafting applied project.</li>
-<li>Dashboard prototype → must be built before refining metrics and visuals.</li>
-<li>Certification courses → sequential (Courses 1–8).</li>
-<li>Portfolio integration → final step after applied project + dashboard are finished.</li>
-</ul>
-<h4>Example Backlog (15+ tasks)</h4>
-<ul>
-<li>Select dataset for applied project</li>
-<li>Draft project charter</li>
-<li>Complete DA Certificate Courses 1–8</li>
-<li>Draft applied project outline &amp; full draft</li>
-<li>Instructor feedback on draft</li>
-<li>Build dashboard prototype in Tableau/Looker Studio</li>
-<li>Peer feedback on dashboard</li>
-<li>Refine dashboard metrics/visuals</li>
-<li>Publish portfolio site</li>
-<li>Link certification badge</li>
-<li>Document competencies gained</li>
-<li>Submit final project</li>
-</ul>
-</div>
-</div>
-<!-- Section: Project Tool Screenshot -->
-<div class="section" id="tool-screenshot">
-<div class="section-header">
-<h2 class="section-title">📷 Project Tool Screenshot</h2>
-<button aria-controls="tool-screenshot-content" aria-expanded="false" class="collapse-toggle"><span class="chevron"></span></button></div>
-<div class="section-content" hidden="" id="tool-screenshot-content">
-<p>This screenshot shows my Jira setup with Epics (Certification, Applied Project, Dashboard, Portfolio), the Phase 1 sprint, and the project backlog organized into tasks.</p>
-<img alt="Jira Project Screenshot" src="./index_files/Jira.png" style="max-width:100%; border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow);">
-</div>
-</div>
-<!-- Footer Note -->
+    <div class="toc-controls">
+      <button id="expandAll" class="btn small">Expand all</button>
+      <button id="collapseAll" class="btn small">Collapse all</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#1-project-goal-description" class="active">📋 1. Project Goal &amp; Description</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#2-vision-mission-strategy-alignment" class="">🎯 2. Vision, Mission &amp; Strategy Alignment</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#3-business-case-justification" class="">💼 3. Business Case &amp; Justification</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#4-high-level-scope" class="">📏 4. High-Level Scope</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#5-stakeholder-register" class="">👥 5. Stakeholder Register</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#6-deliverables" class="">📦 6. Deliverables</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#wbs" class="">🧩Work Breakdown Structure (WBS)</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#budget" class="">💵 8. Budget &amp; Cost Estimate</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#methodology" class="">🧭 Project Methodology (Hybrid: Incremental + Iterative)</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#release-schedule" class="">📊 Multiple Release Schedule</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#tool-selection" class="">🛠 Tool Selection &amp; Setup</a></li>
+        <li><a href="file:///C:/Users/Fernando/Downloads/project_charter_bridging_the_skills_gap_for_my_future_it_career_updated_html%20(1).html#tool-screenshot">📷 Project Tool Screenshot</a></li>
+      </ul>
+    </nav>
+  </aside>
 
+  <div class="container">
+    <div class="header">
+      <div class="header-actions">
+        <button id="themeToggle" class="btn">🌙 Theme</button>
+        <button class="btn" onclick="window.print()">🖨️ Print</button>
+      </div>
+      <h1>Bridging the Skills Gap for My Future IT Career</h1>
+      <p>Project Charter - Managing IT Projects Course</p>
+    </div>
+
+    <div class="content">
+      <!-- Student Information -->
+      <div class="student-info">
+        <h3>Student Information</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-label">Student Name:</div>
+            <div class="info-value">Fernando Olvera</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Course:</div>
+            <div class="info-value">Managing IT Projects</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Semester:</div>
+            <div class="info-value">Fall 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1: Project Title & Description -->
+      <div class="section" id="1-project-goal-description">
+        <div class="section-header">
+          <h2 class="section-title">📋 1. Project Goal &amp; Description</h2>
+          <button class="collapse-toggle" aria-controls="1-project-goal-description-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="1-project-goal-description-content">
+          <p><strong>Project Goal:</strong> Identify, analyze, and close the skill gaps necessary to <em>secure a career</em> in the information technology field, focusing on roles aligned to my background and interests: <strong>Business Operations Analyst (Starlink)</strong>, <strong>Business Analyst (Starlink)</strong>, and <strong>IT Services Technician</strong>.</p>
+          <p>This project uses real job postings to define role-specific competencies, performs a personal GAP analysis comparing current capabilities to requirements, and executes a targeted development plan. The plan culminates in tangible, career-aligned outputs: a skill development evidence set, updated resume and LinkedIn, and role-specific application materials.</p>
+          <p><strong>Ultimate Purpose:</strong> Align my education and SpaceX experience with employer expectations to obtain a full-time role in Business Analysis, Business Operations, or IT Services.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Vision, Mission & Strategy Alignment -->
+      <div class="section" id="2-vision-mission-strategy-alignment">
+        <div class="section-header">
+          <h2 class="section-title">🎯 2. Vision, Mission &amp; Strategy Alignment</h2>
+          <button class="collapse-toggle" aria-controls="2-vision-mission-strategy-alignment-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="2-vision-mission-strategy-alignment-content">
+          <h4>Personal Mission Connection:</h4>
+          <p>Apply technology and data to improve decisions, efficiency, and user experience in high-stakes environments (manufacturing, customer operations, engineering support).</p>
+          <h4>Vision Alignment (3–5 years):</h4>
+          <p>Progress into a Business/IT role that blends analytics, operations, and service excellence—building toward leadership in data-driven decision-making and IT service delivery.</p>
+          <h4>Strategic Goal Support (Semester):</h4>
+          <ul>
+            <li>Translate three target roles into a concrete competency map (skills, tools, responsibilities).</li>
+            <li>Close priority gaps (SQL, BI dashboards, Python, ITSM fundamentals) with measurable outputs.</li>
+            <li>Package outcomes into role-ready materials to support successful applications and interviews.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3: Business Case -->
+      <div class="section" id="3-business-case-justification">
+        <div class="section-header">
+          <h2 class="section-title">💼 3. Business Case &amp; Justification</h2>
+          <button class="collapse-toggle" aria-controls="3-business-case-justification-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="3-business-case-justification-content">
+          <h4>Professional Value:</h4>
+          <ul>
+            <li>Targets in-demand competencies drawn directly from enterprise job descriptions.</li>
+            <li>Produces verifiable artifacts (dashboards, SQL queries, Python notebooks, ITSM documentation) to evidence skills.</li>
+            <li>Improves ability to communicate analytical insights and service impacts to leadership.</li>
+          </ul>
+          <h4>Personal Value:</h4>
+          <ul>
+            <li>Leverages current SpaceX experience (inventory/IT hardware workflows) into BA/IT Services career paths.</li>
+            <li>Provides a structured path from coursework to employment with clear milestones.</li>
+          </ul>
+          <h4>Learning Outcomes:</h4>
+          <ul>
+            <li>Intermediate SQL (joins, views, aggregations) and data modeling for analytics use cases.</li>
+            <li>Interactive BI dashboards (Tableau or Power BI)</li>
+            <li>Python for data automation (ETL basics)</li>
+            <li>IT service fundamentals (ITIL/ITSM concepts, asset lifecycle and ticket workflows).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: High-Level Scope -->
+      <div class="section" id="4-high-level-scope">
+        <div class="section-header">
+          <h2 class="section-title">📏 4. High-Level Scope</h2>
+          <button class="collapse-toggle" aria-controls="4-high-level-scope-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="4-high-level-scope-content">
+          <div class="scope-grid">
+            <div class="scope-card in-scope">
+              <h4>✅ In Scope for Semester Project</h4>
+              <div class="placeholder">
+                <ul>
+                  <li>Analyze three target roles (Business Ops Analyst, Business Analyst, IT Services Technician).</li>
+                  <li>Create a role-by-skill matrix and perform a personal GAP analysis.</li>
+                  <li>Design and execute a skills development plan (SQL, BI dashboard, Python automation, ITSM primer).</li>
+                  <li>Produce tangible artifacts: dashboard, SQL workbook, Python mini-automation, ITSM SOP.</li>
+                  <li>Update resume &amp; LinkedIn; prepare role-specific cover letter templates.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="scope-card roadmap">
+              <h4>🗺️ Roadmap Items (≤6 Months)</h4>
+              <div class="placeholder">
+                <ul>
+                  <li>Attempt one entry-level certification (CompTIA A+ or ITIL 4 Foundation or DA-100 equivalent).</li>
+                  <li>Add a second BI dashboard (Power BI if first is Tableau, or vice versa).</li>
+                  <li>Expand Python automation into a small ETL pipeline to a hosted dashboard.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="scope-card out-scope">
+              <h4>❌ Out of Scope</h4>
+              <div class="placeholder">
+                <ul>
+                  <li>Guaranteeing employment outcomes (applications may occur, but hiring is outside project control).</li>
+                  <li>Building enterprise-grade data platforms beyond the scope of a semester.</li>
+                  <li>Pursuing multiple advanced certifications during the semester.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5: Stakeholder Register -->
+      <div class="section" id="5-stakeholder-register">
+        <div class="section-header">
+          <h2 class="section-title">👥 5. Stakeholder Register</h2>
+          <button class="collapse-toggle" aria-controls="5-stakeholder-register-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="5-stakeholder-register-content">
+          <div class="table-wrap">
+            <table class="stakeholder-table">
+              <thead>
+                <tr>
+                  <th>Stakeholder</th>
+                  <th>Category</th>
+                  <th>Role/Interest</th>
+                  <th>Power</th>
+                  <th>Interest</th>
+                  <th>Quadrant</th>
+                  <th>Engagement Strategy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Instructor</td>
+                  <td>Internal</td>
+                  <td>Evaluates project; ensures alignment with learning outcomes</td>
+                  <td>High</td>
+                  <td>High</td>
+                  <td>Manage Closely</td>
+                  <td>Bi-weekly updates; request feedback on GAP analysis and artifacts.</td>
+                </tr>
+                <tr>
+                  <td>Career Center / Mentors</td>
+                  <td>Internal/External</td>
+                  <td>Resume/LinkedIn review; mock interviews</td>
+                  <td>Medium</td>
+                  <td>High</td>
+                  <td>Manage Closely</td>
+                  <td>Schedule reviews at midterm and final weeks; incorporate feedback.</td>
+                </tr>
+                <tr>
+                  <td>Peers/Classmates</td>
+                  <td>Internal</td>
+                  <td>Peer feedback on dashboards, SQL, and SOPs</td>
+                  <td>Low</td>
+                  <td>Medium</td>
+                  <td>Keep Informed</td>
+                  <td>Share prototypes and collect comments in class/Teams.</td>
+                </tr>
+                <tr>
+                  <td>Future Employers / Recruiters</td>
+                  <td>External</td>
+                  <td>Consumers of final artifacts and application materials</td>
+                  <td>High</td>
+                  <td>Medium</td>
+                  <td>Keep Informed</td>
+                  <td>Align artifacts to job criteria; showcase results on portfolio and LinkedIn.</td>
+                </tr>
+                <tr>
+                  <td>University IT / Lab Resources</td>
+                  <td>Internal</td>
+                  <td>Access to software/tools for SQL, BI, and Python</td>
+                  <td>Medium</td>
+                  <td>Low</td>
+                  <td>Monitor</td>
+                  <td>Use as needed; report blockers promptly.</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="power-interest-grid">
+              <h4>Power-Interest Grid Visualization</h4>
+              <img src="./index_files/Matrix.png" alt="Power-Interest Grid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6: Deliverables & Definition of Done -->
+      <div class="section" id="6-deliverables">
+        <div class="section-header">
+          <h2 class="section-title">📦 6. Deliverables</h2>
+          <button class="collapse-toggle" aria-controls="6-deliverables-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <style>
+          .type-chip { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: white; }
+          .type-tangible { background: #28a745; }
+          .type-intangible { background: #dc3545; }
+          .type-outcome { background: #007bff; }
+        </style>
+        <div class="section-content" id="6-deliverables-content">
+          <table class="stakeholder-table">
+            <thead>
+              <tr>
+                <th>Deliverable</th>
+                <th>Type</th>
+                <th>SMART Description</th>
+                <th>Definition of Done</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Role Research Summary (3 roles)</td>
+                <td><span class="type-chip type-tangible">Tangible</span></td>
+                <td>Compile a comparative table of Business Ops Analyst, Business Analyst, and IT Services Technician with responsibilities, tools, and required skills</td>
+                <td>Matrix completed and cited to postings; uploaded to portfolio repo.</td>
+              </tr>
+              <tr>
+                <td>Personal GAP Analysis Report</td>
+                <td><span class="type-chip type-tangible">Tangible</span></td>
+                <td>Map current skills (from resume/experience) to role requirements; identify priority gaps and rank by impact.</td>
+                <td>GAP table approved by instructor; risks/assumptions documented.</td>
+              </tr>
+              <tr>
+                <td>Skill Development Plan</td>
+                <td><span class="type-chip type-tangible">Tangible</span></td>
+                <td>Create and execute plan targeting SQL, BI dashboard, Python automation, and ITSM fundamentals</td>
+                <td>Plan baselined in Jira; milestones and evidence types defined.</td>
+              </tr>
+              <tr>
+                <td>Evidence Set: Analytics &amp; IT Artifacts</td>
+                <td><span class="type-chip type-tangible">Tangible</span></td>
+                <td>Produce 4 artifacts: (1) BI dashboard (Tableau/Power BI), (2) SQL workbook (5–8 queries), (3) Python mini-automation (ETL/report), (4) ITSM SOP (ticket/asset workflow).</td>
+                <td>Files committed to repo; screenshots and short readme for each artifact.</td>
+              </tr>
+              <tr>
+                <td>Career Package (Resume, LinkedIn, Cover Letters)</td>
+                <td><span class="type-chip type-outcome">Outcome</span></td>
+                <td>Revise resume and LinkedIn to reflect new skills and artifacts; draft two role-specific cover letter templates.</td>
+                <td>PDF resume, LinkedIn updates logged (screenshots), two templates saved.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- WBS -->
+      <div class="section" id="wbs">
+        <div class="section-header">
+          <h2 class="section-title">🧩Work Breakdown Structure (WBS)</h2>
+          <button class="collapse-toggle" aria-controls="wbs-tabs" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content tabs" id="wbs-tabs">
+          <div class="tablist sticky" role="tablist" aria-label="WBS Deliverables">
+            <button role="tab" id="tab-d1" aria-controls="panel-d1" aria-selected="true">Role Research</button>
+            <button role="tab" id="tab-d2" aria-controls="panel-d2" aria-selected="false">GAP Analysis</button>
+            <button role="tab" id="tab-d3" aria-controls="panel-d3" aria-selected="false">Skill Development</button>
+            <button role="tab" id="tab-d4" aria-controls="panel-d4" aria-selected="false">Career Package</button>
+          </div>
+
+          <div id="panel-d1" class="tabpanel" role="tabpanel" aria-labelledby="tab-d1">
+            <h3 style="margin-top:0">Role Research Summary</h3>
+            <div class="table-wrap">
+              <table class="wbs-table">
+                <thead>
+                  <tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="wbs-id">1.0</td><td>Deliverable</td><td>Role Research Summary</td><td></td><td></td></tr>
+                  <tr><td class="wbs-id">1.1</td><td>Work Package</td><td>Collect postings &amp; extract competencies</td><td>3.0</td><td></td></tr>
+                  <tr><td class="wbs-id">1.1.1</td><td>Task</td><td>Parse responsibilities, tools, KPIs</td><td>1.5</td><td>1.1</td></tr>
+                  <tr><td class="wbs-id">1.1.2</td><td>Task</td><td>Build comparative matrix (3 roles)</td><td>1.5</td><td>1.1.1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="panel-d2" class="tabpanel" role="tabpanel" aria-labelledby="tab-d2" hidden="">
+            <h3 style="margin-top:0">Personal GAP Analysis</h3>
+            <div class="table-wrap">
+              <table class="wbs-table">
+                <thead>
+                  <tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="wbs-id">2.0</td><td>Deliverable</td><td>GAP Analysis Report</td><td></td><td></td></tr>
+                  <tr><td class="wbs-id">2.1</td><td>Work Package</td><td>Current skills inventory (resume + coursework)</td><td>2.0</td><td></td></tr>
+                  <tr><td class="wbs-id">2.2</td><td>Work Package</td><td>Gap mapping &amp; prioritization</td><td>3.0</td><td>2.1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="panel-d3" class="tabpanel" role="tabpanel" aria-labelledby="tab-d3" hidden="">
+            <h3 style="margin-top:0">Skill Development</h3>
+            <div class="table-wrap">
+              <table class="wbs-table">
+                <thead>
+                  <tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="wbs-id">3.0</td><td>Deliverable</td><td>Skill Development Plan</td><td></td><td></td></tr>
+                  <tr><td class="wbs-id">3.1</td><td>Work Package</td><td>SQL practice set (5–8 queries)</td><td>7.0</td><td></td></tr>
+                  <tr><td class="wbs-id">3.2</td><td>Work Package</td><td>BI dashboard (Tableau/Power BI)</td><td>10.0</td><td>3.1</td></tr>
+                  <tr><td class="wbs-id">3.3</td><td>Work Package</td><td>Python mini-automation</td><td>7.0</td><td>3.1</td></tr>
+                  <tr><td class="wbs-id">3.4</td><td>Work Package</td><td>ITSM SOP (ticket/asset workflow)</td><td>5.0</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="panel-d4" class="tabpanel" role="tabpanel" aria-labelledby="tab-d4" hidden="">
+            <h3 style="margin-top:0">Career Package</h3>
+            <div class="table-wrap">
+              <table class="wbs-table">
+                <thead>
+                  <tr><th>WBS ID</th><th>Level</th><th>Task Name</th><th>Duration (days)</th><th>Dependencies</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="wbs-id">4.0</td><td>Deliverable</td><td>Career Package</td><td></td><td></td></tr>
+                  <tr><td class="wbs-id">4.1</td><td>Work Package</td><td>Resume &amp; LinkedIn update</td><td>3.0</td><td>3.x</td></tr>
+                  <tr><td class="wbs-id">4.2</td><td>Work Package</td><td>Cover letter templates (BA &amp; IT Services)</td><td>2.0</td><td>4.1</td></tr>
+                  <tr><td class="wbs-id">4.3</td><td>Work Package</td><td>Portfolio integration of artifacts</td><td>3.0</td><td>3.x</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget -->
+      <div class="section" id="budget">
+        <div class="section-header">
+          <h2 class="section-title">💵 8. Budget &amp; Cost Estimate</h2>
+          <button class="collapse-toggle" aria-controls="budget-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="budget-content">
+          <div class="table-wrap">
+            <table class="budget-table" id="budgetTable">
+              <thead>
+                <tr>
+                  <th>Cost Item</th>
+                  <th>Quantity/Hours</th>
+                  <th>Rate/Price</th>
+                  <th class="text-right">Total Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- LABOR -->
+                <tr class="bt-band bt-labor"><td colspan="4">👨‍💻 LABOR COSTS</td></tr>
+                <tr data-type="labor">
+                  <td>Analyst / Student Researcher</td>
+                  <td contenteditable="true" data-qty="">120</td>
+                  <td contenteditable="true" data-rate="">$25/hr</td>
+                  <td class="text-right" data-line="">$3,000</td>
+                </tr>
+                <tr data-type="labor">
+                  <td>Dashboard Developer</td>
+                  <td contenteditable="true" data-qty="">40</td>
+                  <td contenteditable="true" data-rate="">$30/hr</td>
+                  <td class="text-right" data-line="">$1,200</td>
+                </tr>
+                <tr class="bt-subtotal">
+                  <td colspan="3"><strong>LABOR SUBTOTAL</strong></td>
+                  <td class="text-right" id="laborSubtotal">$4,200</td>
+                </tr>
+
+                <!-- SOFTWARE / MATERIALS / SERVICES -->
+                <tr class="bt-band bt-software"><td colspan="4">💻 SOFTWARE / LEARNING</td></tr>
+                <tr data-type="fixed">
+                  <td>Tableau Public / Power BI (Student)</td>
+                  <td contenteditable="true" data-qty="">N/A</td>
+                  <td contenteditable="true" data-rate="">Free</td>
+                  <td class="text-right" data-line="">$0</td>
+                </tr>
+                <tr data-type="fixed">
+                  <td>Practice Exam or Learning Resources</td>
+                  <td contenteditable="true" data-qty="">1</td>
+                  <td contenteditable="true" data-rate="">$49</td>
+                  <td class="text-right" data-line="">$49</td>
+                </tr>
+                <tr class="bt-band bt-materials"><td colspan="4">📦 MATERIALS</td></tr>
+                <tr data-type="fixed">
+                  <td>Misc. supplies (notebooks, printing)</td>
+                  <td contenteditable="true" data-qty="">1</td>
+                  <td contenteditable="true" data-rate="">$20</td>
+                  <td class="text-right" data-line="">$20</td>
+                </tr>
+                <tr class="bt-band bt-services"><td colspan="4">🧰 SERVICES</td></tr>
+                <tr data-type="fixed">
+                  <td>LinkedIn Premium (optional)</td>
+                  <td contenteditable="true" data-qty="">1 month</td>
+                  <td contenteditable="true" data-rate="">$39</td>
+                  <td class="text-right" data-line="">$39</td>
+                </tr>
+
+                <!-- TOTALS -->
+                <tr class="bt-subtotal">
+                  <td colspan="3"><strong>SUBTOTAL DIRECT COSTS</strong></td>
+                  <td class="text-right" id="directSubtotal">$4,308</td>
+                </tr>
+                <tr class="bt-subtotal">
+                  <td>Contingency Reserve</td>
+                  <td contenteditable="true" id="contPct">10%</td>
+                  <td class="muted">Applied to direct subtotal</td>
+                  <td class="text-right" id="contValue">$431</td>
+                </tr>
+                <tr class="bt-total">
+                  <td colspan="3"><strong>💰 TOTAL PROJECT BUDGET</strong></td>
+                  <td class="text-right" id="grandTotal">$4,739</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Methodology -->
+      <div class="section" id="methodology">
+        <div class="section-header">
+          <h2 class="section-title">🧭 Project Methodology (Hybrid: Incremental + Iterative)</h2>
+          <button class="collapse-toggle" aria-controls="methodology-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="methodology-content">
+          <p><strong>Requirements:</strong> Role analysis and deliverables are well-defined, but artifacts (dashboard, SQL set, Python automation) benefit from iteration and feedback.</p>
+          <p><strong>Delivery Cadence:</strong> Three releases to reduce risk and incorporate feedback.</p>
+          <ul>
+            <li><strong>Release 1 (Week 3–5):</strong> Role research matrix + GAP analysis draft</li>
+            <li><strong>Release 2 (Week 6–10):</strong> Skills Plan + SQL set + dashboard prototype</li>
+            <li><strong>Release 3 (Week 11–14):</strong> Python automation + ITSM SOP + Career Package</li>
+          </ul>
+          <p><strong>Approach:</strong></p>
+          <ul>
+            <li><strong>Predictive:</strong> Milestone dates and required artifacts.</li>
+            <li><strong>Iterative:</strong> Multiple feedback cycles for analytics and documentation artifacts.</li>
+            <li><strong>Incremental:</strong> Deliver usable outputs at each release.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Release Schedule Diagram -->
+      <div class="section" id="release-schedule">
+        <div class="section-header">
+          <h2 class="section-title">📊 Multiple Release Schedule</h2>
+          <button class="collapse-toggle" aria-controls="release-schedule-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="release-schedule-content">
+          <div class="schedule" style="display:flex;justify-content:center;align-items:flex-start;gap:40px;flex-wrap:wrap;">
+            <div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 1</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 3–5</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>Role research matrix (3 roles)</li>
+                <li>GAP analysis draft</li>
+                <li>Baseline Skills Plan (Jira)</li>
+              </ul>
+            </div>
+            <div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
+            <div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 2</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 6–10</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>SQL practice set (5–8 queries)</li>
+                <li>Dashboard prototype (Tableau/Power BI)</li>
+                <li>Iteration with peer/instructor feedback</li>
+              </ul>
+            </div>
+            <div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
+            <div class="release" style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback" style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 3</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 11–14</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>Python mini-automation + ITSM SOP</li>
+                <li>Resume/LinkedIn + cover letters</li>
+                <li>Portfolio integration and submission</li>
+              </ul>
+            </div>
+          </div>
+          <div class="legend" style="margin-top:30px;font-size:14px;color:#333;text-align:center;">
+            <strong>Delivery:</strong> Every 3–4 weeks | <strong>Feedback:</strong> After each release
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool Selection & Setup -->
+      <div class="section" id="tool-selection">
+        <div class="section-header">
+          <h2 class="section-title">🛠 Tool Selection &amp; Setup</h2>
+          <button class="collapse-toggle" aria-controls="tool-selection-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="tool-selection-content">
+          <h4>Tools Explored</h4>
+          <ul>
+            <li><strong>Microsoft Project</strong> → Predictive planning and WBS reporting; heavy for solo student use.</li>
+            <li><strong>Trello</strong> → Lightweight Kanban; limited reporting and dependency handling.</li>
+            <li><strong>Jira</strong> → Best mix for Hybrid delivery (backlog, sprints, releases, and reporting).</li>
+          </ul>
+          <h4>Final Choice: <span class="chip">Jira</span></h4>
+          <p>Jira supports the Hybrid plan: fixed milestones with iterative artifacts and continuous feedback.</p>
+          <ul>
+            <li>Backlog &amp; Sprints → manage Skill Plan tasks and artifacts.</li>
+            <li>Releases → R1, R2, R3 cadence aligned to this charter.</li>
+            <li>Custom issue types → SQL, Dashboard, Python, SOP, Resume, LinkedIn.</li>
+          </ul>
+          <h4>Dependencies</h4>
+          <ul>
+            <li>Role research → precedes GAP analysis and Skill Plan.</li>
+            <li>SQL practice → precedes dashboard and Python automation.</li>
+            <li>Artifacts → precede resume/LinkedIn updates.</li>
+          </ul>
+          <h4>Example Backlog</h4>
+          <ul>
+            <li>Extract competencies from three postings</li>
+            <li>Complete GAP matrix and prioritize</li>
+            <li>Build SQL practice set</li>
+            <li>Create dashboard prototype and iterate</li>
+            <li>Write ITSM SOP for ticket/asset workflow</li>
+            <li>Automate CSV-to-dashboard update with Python</li>
+            <li>Update resume + LinkedIn and draft cover letters</li>
+            <li>Integrate artifacts into portfolio</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tool Screenshot -->
+      <div class="section" id="tool-screenshot">
+        <div class="section-header">
+          <h2 class="section-title">📷 Project Tool Screenshot</h2>
+          <button class="collapse-toggle" aria-controls="tool-screenshot-content" aria-expanded="true"><span class="chevron"></span></button>
+        </div>
+        <div class="section-content" id="tool-screenshot-content">
+          <p>This screenshot shows my Jira setup with Epics (Role Research, GAP Analysis, Skill Development, Career Package), the current sprint, and the project backlog organized into tasks.</p>
+          <img src="./index_files/Jira.png" alt="Jira Project Screenshot" style="max-width:100%; border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow);">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div></div>
+
 <script>
 (function () {
   const container = document.getElementById('wbs-tabs');
   if (!container) return;
-
-  // Prevent the browser from auto-scrolling to hash targets on load
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-
-  const tabs   = Array.from(container.querySelectorAll('[role="tab"]'));
+  const tabs = [...container.querySelectorAll('[role="tab"]')];
   const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
 
-  function activate(idx, updateHash=false, focusTab=true) {
-    tabs.forEach((t,i) => {
-      const on = i === idx;
+  function activate(idx, pushHash=false) {
+    tabs.forEach((t,i)=> {
+      const on = i===idx;
       t.setAttribute('aria-selected', on);
       panels[i].hidden = !on;
     });
-
-    // Update address bar without triggering a jump
-    if (updateHash) history.replaceState(null, '', '#' + panels[idx].id);
-
-    // Only focus the tab when the user interacts (not on initial load)
-    if (focusTab) tabs[idx].focus();
+    if (pushHash) history.replaceState(null,'','#'+panels[idx].id);
+    tabs[idx].focus();
   }
 
-  // Click + keyboard
+  tabs.forEach((tab,i)=>{
+    tab.addEventListener('click',()=>activate(i,true));
+    tab.addEventListener('keydown',e=>{
+      const k=e.key; let j=i;
+      if (k==='ArrowRight') j=(i+1)%tabs.length;
+      else if (k==='ArrowLeft') j=(i-1+tabs.length)%tabs.length;
+      else if (k==='Home') j=0;
+      else if (k==='End') j=tabs.length-1;
+      else return;
+      e.preventDefault(); activate(j,true);
+    });
+  });
+
+  const fromHash = panels.findIndex(p => '#'+p.id === location.hash);
+  activate(fromHash>=0 ? fromHash : 0);
+})();
+</script>
+<script>
+(function(){
+  const container = document.getElementById('wbs-tabs');
+  if (!container) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const tabs   = Array.from(container.querySelectorAll('[role="tab"]'));
+  const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
+  function activate(idx, updateHash=false, focusTab=true) {
+    tabs.forEach((t,i) => { const on = i === idx; t.setAttribute('aria-selected', on); panels[i].hidden = !on; });
+    if (updateHash) history.replaceState(null, '', '#' + panels[idx].id);
+    if (focusTab) tabs[idx].focus();
+  }
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => activate(i, true, true));
     tab.addEventListener('keydown', e => {
@@ -1583,41 +879,89 @@
       else if (k === 'Home') j = 0;
       else if (k === 'End') j = tabs.length - 1;
       else return;
-      e.preventDefault();
-      activate(j, true, true);
+      e.preventDefault(); activate(j, true, true);
     });
   });
-
-  // Initial activation based on hash, but DO NOT focus or scroll
   const idxFromHash = panels.findIndex(p => '#' + p.id === location.hash);
   activate(idxFromHash >= 0 ? idxFromHash : 0, false, false);
-
-  // After layout settles, force scroll to top so no mid-page jump remains
   requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
 })();
 </script>
-<script>document.getElementById('themeToggle')?.addEventListener('click',()=>document.body.classList.toggle('dark'));</script>
+<script>
+(function(){
+  const sections = Array.from(document.querySelectorAll('.section'));
+  function setExpanded(content, btn, on, save=true){
+    if(!content || !btn) return;
+    if(on){ content.hidden = false; btn.setAttribute('aria-expanded','true'); }
+    else  { content.hidden = true;  btn.setAttribute('aria-expanded','false'); }
+    if(save){
+      const id = content.id || content.closest('.section')?.id;
+      if(id) {
+        try {
+          const state = JSON.parse(localStorage.getItem('collapsibleState')||"{}");
+          state[id] = on;
+          localStorage.setItem('collapsibleState', JSON.stringify(state));
+        } catch(e){ }
+      }
+    }
+  }
+  const saved = JSON.parse(localStorage.getItem('collapsibleState')||"{}");
+  sections.forEach((sec, idx)=>{
+    const content = sec.querySelector('.section-content');
+    const btn = sec.querySelector('.collapse-toggle');
+    if(!content || !btn) return;
+    const key = content.id || sec.id;
+    const want = key in saved ? !!saved[key] : (idx < 2);
+    setExpanded(content, btn, want, false);
+    btn.addEventListener('click', ()=> setExpanded(content, btn, btn.getAttribute('aria-expanded')!=='true'));
+  });
+  const expandAll = document.getElementById('expandAll');
+  const collapseAll = document.getElementById('collapseAll');
+  function all(to){ sections.forEach(sec=>{ const content = sec.querySelector('.section-content'); const btn = sec.querySelector('.collapse-toggle'); setExpanded(content, btn, to); }); }
+  expandAll?.addEventListener('click', ()=>all(true));
+  collapseAll?.addEventListener('click', ()=>all(false));
+  const search = document.getElementById('tocSearch');
+  search?.addEventListener('input', (e)=>{
+    const q = e.target.value.trim().toLowerCase();
+    document.querySelectorAll('#toc nav li').forEach(li=>{
+      const a = li.querySelector('a');
+      const show = !q || a.textContent.toLowerCase().includes(q);
+      li.style.display = show ? '' : 'none';
+    });
+  });
+  const links = Array.from(document.querySelectorAll('#toc nav a'));
+  const map = new Map(links.map(a=>[a.getAttribute('href').slice(1), a]));
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+        links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+      }
+    });
+  }, { rootMargin: '0px 0px -70% 0px', threshold: 0.1 });
+  sections.forEach(sec=>obs.observe(sec));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); history.replaceState(null,'','#'+id); }
+    });
+  });
+})();
+</script>
+<script>
+document.getElementById('themeToggle')?.addEventListener('click',()=>document.body.classList.toggle('dark'));
+</script>
 <script>
 (function(){
   const $ = (sel, ctx=document) => ctx.querySelector(sel);
   const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-
   const table = document.getElementById('budgetTable');
   if(!table) return;
-
   const money = n => n.toLocaleString(undefined, {style:'currency', currency:'USD', maximumFractionDigits:0});
-  const toNum = v => {
-    if(!v) return 0;
-    v = String(v).trim();
-    // supports "74", "4 months", "$25/hr", "$39/month", "Free"
-    if (/free/i.test(v)) return 0;
-    const m = v.replace(/[^\d.]/g,'');
-    return m ? parseFloat(m) : 0;
-  };
-
+  const toNum = v => { if(!v) return 0; v = String(v).trim(); if (/free/i.test(v)) return 0; const m = v.replace(/[^\d.]/g,''); return m ? parseFloat(m) : 0; };
   function calc(){
     let labor = 0, soft = 0, mat = 0, svc = 0;
-
     $$('#budgetTable tbody tr[data-type]').forEach(tr=>{
       const type = tr.getAttribute('data-type');
       const qty = toNum(tr.querySelector('[data-qty]')?.innerText);
@@ -1625,27 +969,14 @@
       const perHour = /hr/i.test(rate);
       const perMonth = /month/i.test(rate);
       const amount = toNum(rate);
-
       let line = 0;
       if (perHour)  line = qty * amount;
       else if (perMonth) line = qty * amount;
       else if (/free/i.test(rate)) line = 0;
       else line = amount * (qty || 1);
-
-      tr.querySelector('[data-line]').innerText = money(line);
-
+      tr.querySelector('[data-line]')?.innerText = money(line);
       if(type==='labor') labor += line;
-      else if(type==='fixed'){
-        // categorize by band above it
-        const prevBand = tr.previousElementSibling?.className || '';
-        if (/bt-software/.test(prevBand) || tr.closest('tbody').querySelector('.bt-software')?.compareDocumentPosition(tr) & Node.DOCUMENT_POSITION_PRECEDING === 0) {}
-      }
     });
-
-    // Compute by scanning band sections for clarity
-    soft = [...table.rows].reduce((s, r)=> s + (r.previousElementSibling && r.previousElementSibling.classList.contains('bt-software') ? 0:0), 0); // placeholder
-
-    // Safer: sum again by walking each band explicitly
     function sumBetween(startCls, endCls){
       let sum = 0, on = false;
       for (const r of table.tBodies[0].rows){
@@ -1660,106 +991,18 @@
     }
     soft = sumBetween('bt-software','bt-materials');
     mat  = sumBetween('bt-materials','bt-services');
-    svc  = sumBetween('bt-services','bt-total'); // until end
-
+    svc  = sumBetween('bt-services','bt-total');
     $('#laborSubtotal').innerText = money(labor);
-    $('#softSubtotal').innerText  = money(soft);
-    $('#matSubtotal').innerText   = money(mat);
-    $('#svcSubtotal').innerText   = money(svc);
-
-    const direct = labor + soft + mat + svc;
-    $('#directSubtotal').innerText = money(direct);
-
+    $('#directSubtotal').innerText = money(labor + soft + mat + svc);
     const pct = toNum($('#contPct').innerText) / 100 || 0;
-    const cont = Math.round(direct * pct);
+    const cont = Math.round((labor + soft + mat + svc) * pct);
     $('#contValue').innerText = money(cont);
-
-    $('#grandTotal').innerText = money(direct + cont);
+    $('#grandTotal').innerText = money(labor + soft + mat + svc + cont);
   }
-
   table.addEventListener('input', calc);
-  calc(); // initial
+  calc();
 })();
 </script>
-<script>
-(function(){
-  // Collapsible behavior with localStorage state
-  const sections = Array.from(document.querySelectorAll('.section'));
-  function setExpanded(content, btn, on, save=true){
-    if(!content || !btn) return;
-    if(on){ content.hidden = false; btn.setAttribute('aria-expanded','true'); }
-    else  { content.hidden = true;  btn.setAttribute('aria-expanded','false'); }
-    if(save){
-      const id = content.id || content.closest('.section')?.id;
-      if(id) {
-        try {
-          const state = JSON.parse(localStorage.getItem('collapsibleState')||"{}");
-          state[id] = on;
-          localStorage.setItem('collapsibleState', JSON.stringify(state));
-        } catch(e){ /* ignore */ }
-      }
-    }
-  }
-  // Initialize
-  const saved = JSON.parse(localStorage.getItem('collapsibleState')||"{}");
-  sections.forEach((sec, idx)=>{
-    const content = sec.querySelector('.section-content');
-    const btn = sec.querySelector('.collapse-toggle');
-    if(!content || !btn) return;
-    const key = content.id || sec.id;
-    const want = key in saved ? !!saved[key] : (idx < 2); // first two open by default
-    setExpanded(content, btn, want, false);
-    btn.addEventListener('click', ()=> setExpanded(content, btn, btn.getAttribute('aria-expanded')!=='true'));
-  });
 
-  // Expand/Collapse all
-  const expandAll = document.getElementById('expandAll');
-  const collapseAll = document.getElementById('collapseAll');
-  function all(to){
-    sections.forEach(sec=>{
-      const content = sec.querySelector('.section-content');
-      const btn = sec.querySelector('.collapse-toggle');
-      setExpanded(content, btn, to);
-    });
-  }
-  expandAll?.addEventListener('click', ()=>all(true));
-  collapseAll?.addEventListener('click', ()=>all(false));
 
-  // TOC filter
-  const search = document.getElementById('tocSearch');
-  search?.addEventListener('input', (e)=>{
-    const q = e.target.value.trim().toLowerCase();
-    document.querySelectorAll('#toc nav li').forEach(li=>{
-      const a = li.querySelector('a');
-      const show = !q || a.textContent.toLowerCase().includes(q);
-      li.style.display = show ? '' : 'none';
-    });
-  });
-
-  // Scrollspy to highlight current section in TOC
-  const links = Array.from(document.querySelectorAll('#toc nav a'));
-  const map = new Map(links.map(a=>[a.getAttribute('href').slice(1), a]));
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        const id = entry.target.id;
-        links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
-      }
-    });
-  }, { rootMargin: '0px 0px -70% 0px', threshold: 0.1 });
-  sections.forEach(sec=>obs.observe(sec));
-
-  // Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-        history.replaceState(null,'','#'+id);
-      }
-    });
-  });
-})();
-</script></body></html>
+</body></html>
