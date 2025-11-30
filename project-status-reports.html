@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fernando Olvera | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ---------- Global styles ---------- */
+    :root {
+      --bg: #f7f7fb;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Layout ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      transition: background 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      background: #e5e7eb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    section {
+      padding: 2.5rem 0;
+      scroll-margin-top: 4.5rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 0.6rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    /* ---------- Hero section ---------- */
+    .hero {
+      display: grid;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid #111827;
+      background: #111827;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      background: #000000;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #111827;
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #e5e7eb;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    .hero-card {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-list {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+
+    .hero-card-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ---------- Reusable card grid ---------- */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+    }
+
+    /* ---------- Skills list ---------- */
+    .skills-groups {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .skills-groups {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .skills-group-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .skills-group-list {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-wrapper {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+      max-width: 520px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-label {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f9fafb;
+    }
+
+    .weekly-accordion details {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .weekly-summary {
+      padding: 1rem 1.4rem;
+      cursor: pointer;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background 0.2s ease;
+    }
+
+    .weekly-summary:hover {
+      background: #f1f5f9;
+    }
+
+    .weekly-summary::marker,
+    .weekly-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .weekly-summary:after {
+      content: "▼";
+      font-size: 0.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] .weekly-summary:after {
+      transform: rotate(180deg);
+    }
+
+    .weekly-content {
+      padding: 0 1.4rem 1.4rem;
+      border-top: 1px solid var(--border);
+      margin-top: -1px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .weekly-content ul {
+      margin: 0.75rem 0 0 1.2rem;
+    }
+
+    .weekly-content li {
+      margin-bottom: 0.6rem;
+    }
+
+    .status-green {
+      background: #dcfce7;
+      color: #166534;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .status-yellow {
+      background: #fef9c3;
+      color: #854d0e;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .status-red {
+      background: #fee2e2;
+      color: #991b1b;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <!-- Replace with your name or logo -->
+        <a href="index.html">Fernando Olvera</a>
+      </div>
+      <nav class="nav-links">
+        <a href="project-charter.html">Project Charter</a>
+        <a href="project-status-reports.html">Project Status Reports</a>
+        <a href="project-closure-document.html">Project Closure Document</a>
+        <a href="star-stories.html">STAR Stories</a>
+        <a href="interviews.html">Interviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home">
+      <div>
+        <h1 class="hero-title">📊 Progress Status Reports</h1>
+        <p class="hero-tagline">
+          Keeping stakeholders informed with clear and concise project status updates.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="weekly-reports">
+      <h2>Weekly Reports</h2>
+      <p>
+        Weekly status reports provide a regular update on project progress, highlighting key achievements, upcoming
+        tasks, and any issues or risks that need attention.
+      </p>
+    
+      <!-- Collapsible weekly reports – newest first -->
+      <div class="weekly-accordion" style="margin-top: 2rem; display: grid; gap: 0.75rem;">
+    
+        <!-- Week 15 -->
+        <details class="weekly-details" open>
+          <summary class="weekly-summary">
+            <strong>Week 15:</strong> Nov 24 – Nov 30, 2025
+            <span class="weekly-status status-yellow">Delayed</span>
+          </summary>
+          <div class="weekly-content">
+            <h4>🏥 Project Health</h4>
+            <p><strong>Status:</strong> 🟡 Delayed</p>
+            <p><strong>Executive Summary:</strong> Researched potential job listings on Tesla and completed 
+              mock technical interview with friend/mentor. Project Charter was greatly updated this week. Python progress slowed due to upcoming finals week for other courses.</p>
+            <h4>✅ Accomplishments This Week</h4>
+            <ol>
+              <li>Roles at Tesla identified and WIP.</li>
+              <li>SQL mock interview completed.</li>
+              <li>Python skill progressed to 60%.</li>
+              <li>Project Charter site visual/navigation updated.</li>
+            </ol>
+            <h4>📅 Plan for Next Week</h4>
+            <ol>
+              <li>Reach 70% - 80% Python guidebook + begin certification path via linkedin.</li>
+              <li>Additional project charter updates (including a welcome page).</li>
+              <li>Apply to researched Telsa roles.</li>
+            </ol>
+            <h4>🎯 Upcoming Milestones</h4>
+            <div style="overflow-x:auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Milestone</th>
+                    <th>Target Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SQL Skill completion</td>
+                    <td>11/11/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Python Skill Training</td>
+                    <td>11/28/2025</td>
+                    <td>DELAYED</td>
+                  </tr>
+    
+                  <tr>
+                    <td>Resume Overhaul Completed with pending skill placeholders</td>
+                    <td>11/04/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Secure first interview (any role)</td>
+                    <td>12/31/2025</td>
+                    <td>In Progress</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>⚠️ Issues &amp; Risks / Mitigations</h4>
+            <ul>
+              <li><strong>Risk: Finals week for courses aproaching. May have to delay certain plans to accommodate.</strong></li>
+              <li><strong>Mitigation: TEMPORARILY reduce task scope for upcoming week and minimize planned goals.</strong></li>
+            </ul>
+            <h4>🔄 Changes Since Last Report</h4>
+            <ul>
+              <li><strong>No major changes to report</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 14 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 14:</strong> Nov 17 – Nov 23, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <h4>🏥 Project Health</h4>
+            <p><strong>Status:</strong> 🟢 ON TRACK</p>
+            <p><strong>Executive Summary:</strong> This week maintained strong momentum: submitted 3 new, highly tailored
+              applications (now at 5/5 target for the two-week sprint), continued aggressive SQL + Python mock interview prep,
+              and crossed ~50% of the Python guidebook.</p>
+            <h4>✅ Accomplishments This Week</h4>
+            <ol>
+              <li>Submitted 3 additional job applications (total now 5/5 for the sprint)</li>
+              <li>Advanced SQL mock interview prep (Solved 5 new problems on LeetCode)</li>
+              <li>Python skill progress</li>
+            </ol>
+            <h4>📅 Plan for Next Week</h4>
+            <ol>
+              <li>Reach 70% - 80% Python guidebook + begin certification path via linkedin.</li>
+              <li>Research new roles to apply to. (Target: Tesla)</li>
+              <li>Complete first full-length mock technical interview (SQL + Python live coding, 30 min) with friend/mentor</li>
+            </ol>
+            <h4>🎯 Upcoming Milestones</h4>
+            <div style="overflow-x:auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Milestone</th>
+                    <th>Target Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SQL Skill completion</td>
+                    <td>11/11/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Python Skill Training</td>
+                    <td>11/28/2025</td>
+                    <td>In Progress</td>
+                  </tr>
+        
+                  <tr>
+                    <td>Resume Overhaul Completed with pending skill placeholders</td>
+                    <td>11/04/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Secure first interview (any role)</td>
+                    <td>12/31/2025</td>
+                    <td>In Progress</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>⚠️ Issues &amp; Risks / Mitigations</h4>
+            <ul>
+              <li><strong>Risk: Response rate still low (0 interviews from first 5 apps so far)</strong></li>
+              <li><strong>Mitigation: Shifting to heavier referral outreach this week (10+ LinkedIn messages drafted to
+                  SpaceX/Tesla employees)</strong></li>
+            </ul>
+            <h4>🔄 Changes Since Last Report</h4>
+            <ul>
+              <li><strong>No major changes to report</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 13 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 13:</strong>Nov 10 – Nov 16, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <h4>🏥 Project Health</h4>
+            <p><strong>Status:</strong> 🟢 ON TRACK</p>
+            <p><strong>Executive Summary:</strong>This week successfully executed the planned objectives. Submitted 2 additional
+              job applications (both SpaceX roles), began SQL mock interview practice, and advanced Python book to 30%
+              (guidebook + LinkedIn Learning path). Resume and portfolio remain unchanged. Total meaningful work: 90+ minutes
+              allocated across Python study, SQL practice, and application tailoring.</p>
+            <h4>✅ Accomplishments This Week</h4>
+            <ol>
+              <li>Submitted 2 additional job applications – SpaceX Intelligence Analyst &amp; Raptor Operations Analyst
+                (tailored with ATS-optimized resume + SQL cert).</li>
+              <li>Began SQL mock interview prep – Solved 10+ practice problems on LeetCode/HackerRank (focus: JOINs,
+                aggregation, window functions).</li>
+              <li>Advanced Python skill training – Reached 30% through LinkedIn Learning guidebook (completed modules on
+                variables, data types, control flow; started functions).</li>
+            </ol>
+            <h4>📅 Plan for Next Week</h4>
+            <ol>
+              <li>Reach 70% Python guidebook + begin certification path.</li>
+              <li>Submit 3 additional job applications (mix of Business Analyst, IT Analyst, and Operations roles).</li>
+              <li>Expand mock interviews to include Python (3 technical + 2 behavioral questions).</li>
+            </ol>
+            <h4>🎯 Upcoming Milestones</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Milestone</th>
+                    <th>Target Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SQL Skill completion</td>
+                    <td>11/11/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Python Skill Training</td>
+                    <td>11/28/2025</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td>Resume Overhaul Completed with pending skill placeholders</td>
+                    <td>11/04/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            <h4>⚠️ Issues &amp; Risks / Mitigations</h4>
+            <ul>
+              <li><strong>Risk: Only 2/5 applications submitted.</strong></li>
+              <li><strong>Mitigation: Pre-identify 3 roles by Monday; batch-tailor on Tuesday.</strong></li>
+            </ul>
+            <h4>🔄 Changes Since Last Report</h4>
+            <ul>
+              <li><strong>No major changes to report</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 12 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 12:</strong> Nov 3 – Nov 9, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <h4>🏥 Project Health</h4>
+            <p><strong>Status:</strong> 🟢 ON TRACK</p>
+            <p><strong>Executive Summary:</strong>This week successfully executed the planned objectives. SQL course reached
+              100% completion, job application submissions were initiated with a targeted outreach to SpaceX, Verizon, and other
+              identified roles, and Python skill training officially began with foundational modules completed. Resume overhaul
+              remains on track with skill placeholders now actively being replaced with real-world evidence from current
+              training.</p>
+
+            <h4>✅ Accomplishments This Week</h4>
+            <ol>
+              <li>Reached 100% SQL course completion – Certificate earned and added to resume/LinkedIn.</li>
+              <li>Initiated job application submissions – Applied to 3+ targeted roles (e.g., SpaceX Business Operations
+                Analyst, Verizon Business Analyst, IT Services Technician). Tailored applications using finalized ATS-optimized
+                resume.</li>
+              <li>Began Python skill training – Completed introductory modules (variables, data types, control structures)</li>
+            </ol>
+            
+            <h4>📅 Plan for Next Week</h4>
+            <ul>
+              <li>Complete Python Week 1 project (data analysis script) and document in portfolio.</li>
+              <li>Submit 5 additional job applications (focus: entry-level Business Analyst / IT Analyst roles).</li>
+              <li>Begin mock interview preparation using SQL + Python behavioral and technical questions.</li>
+            </ul>
+
+            <h4>🎯 Upcoming Milestones</h4>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Milestone</th>
+                    <th>Target Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SQL Skill completion</td>
+                    <td>11/11/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                  <tr>
+                    <td>Python Skill Training</td>
+                    <td>11/11/2025</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td>Resume Overhaul Completed with pending skill placeholders</td>
+                    <td>11/04/2025</td>
+                    <td>Complete</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            <h4>⚠️ Issues &amp; Risks / Mitigations</h4>
+            <ul>
+              <li><strong>No issues/risks to report</strong></li>
+            </ul>
+            <h4>🔄 Changes Since Last Report</h4>
+            <ul>
+              <li><strong>No changes to report</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 11 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 11:</strong> Oct 27 – Nov 2, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <p>Following my professor’s feedback, I refined the Project Charter to include a final
+              deliverable focused on job application and professional networking. Specifically, I added a
+              new milestone—“Apply to 3 Target IT/BA Roles”—and a supporting task to “Connect with
+              professionals currently working in similar roles (via LinkedIn or company networks).” This
+              addition ensures that the project concludes with a measurable outcome that directly
+              aligns with the goal of securing an IT-related role rather than only preparing for one.</p>
+            <strong>Accomplishments:</strong>
+            <ul>
+              <li>Integrated new deliverable: Apply for at least 3 IT-related positions.</li>
+              <li>Reached 60% completion in SQL learning path.</li>
+              <li>Resume template research conducted to find ATS-compliant formats.</li>
+            </ul>
+            <strong>Plans for Next Week:</strong>
+            <ul>
+              <li>Add charter visuals and finalize WBS images.</li>
+              <li>Reach 100% SQL course completion.</li>
+              <li>Initiate job application submissions.</li>
+              <li>Begin Python skill training</li>
+            </ul>
+            <strong>Upcoming Milestones</strong>
+            <table>
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Target Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SQL Skill Completion</td>
+                  <td>11/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Python Skill Training</td>
+                  <td>11/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Resume Overhaul Completed</td>
+                  <td>11/04/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              </tbody>
+              </tbody>
+            </table>
+            <strong>Issues & Risks / Mitigations:</strong>
+            <ul>
+              <li>No major issues or risks identified this week.</li>
+            </ul>
+            <strong>Changes Since Last Report</strong>
+            <ul>
+              <li>No changes to report</li>
+            </ul>
+            <strong>Additional Notes:</strong>
+            <p>The project plan was updated to incorporate the new “Application and Networking” phase,
+              which follows the completion of the technical skills phase. Dependencies were updated so
+              that resume finalization and LinkedIn optimization precede job applications.</p>
+          </div>
+        </details>
+
+        <!-- Week 10 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 10:</strong> Oct 20 – Oct 26, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <p>After receiving feedback, I further refined the Project Charter to clearly reflect my project’s
+              pivot from a general “career readiness” focus to a specific goal: securing my first IT role.
+              The new version emphasizes role alignment (Business Operations Analyst, Business
+              Analyst, and IT Services Technician) and integrates measurable skill-building objectives in
+              SQL, Python, and IT service fundamentals.</p>
+            <strong>Accomplishments:</strong>
+            <ul>
+              <li>Revised project charter to reflect the pivoted goal and maintain alignment with
+                professor feedback</li>
+              <li>Began SQL and Python skill training via LinkedIn Learning.</li>
+              <li>Resume template research conducted to find ATS-compliant formats.</li>
+            </ul>
+            <strong>Plans for Next Week:</strong>
+            <ul>
+              <li>Add charter visuals and finalize WBS images.</li>
+              <li>Reach 50% SQL course completion.</li>
+              <li>Select and customize resume template for IT/BA roles.</li>
+            </ul>
+            <strong>Upcoming Milestones</strong>
+            <table>
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Target Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SQL Skill Completion</td>
+                  <td>11/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Python Skill Training</td>
+                  <td>11/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Resume Overhaul Completed</td>
+                  <td>11/04/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              </tbody>
+              </tbody>
+            </table>
+            <strong>Issues & Risks / Mitigations:</strong>
+            <ul>
+              <li>No major issues or risks identified this week.</li>
+            </ul>
+            <strong>Changes Since Last Report</strong>
+            <ul>
+              <li>No changes to report</li>
+            </ul>
+            <strong>Additional Notes:</strong>
+            <p>This week’s update focused on ensuring that the project plan accurately reflect the
+              refined deliverables and timeline. Minor changes were made to clarify dependencies
+              between the SQL, and Python tasks. Additional adjustments include revising milestone
+              dates for realism (extending completion to mid-November) and verifying the sequence of
+              the “Career Package” deliverable to follow skill development.</p>
+          </div>
+        </details>
+
+        <!-- Week 9 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 9:</strong> Oct 13 – Oct 19, 2025
+            <span class="weekly-status status-yellow">Delayed</span>
+          </summary>
+          <div class="weekly-content">
+            <strong>Report:</strong>
+            <p>During my check-in, my professor advised that my original project charter focused too narrowly on
+              certification and
+              portfolio development. She recommended reframing the goal toward actual job acquisition and aligning each
+              section
+              with three target career roles. In response, I replaced the Google Certificate objective with a new focus
+              on
+              identifying and closing skill gaps for Business Analyst, Business Operations Analyst, and IT Services
+              Technician
+              positions, revised the scope, deliverables, and WBS accordingly, and updated all content to emphasize
+              tangible
+              outcomes that support securing a career in the IT field.</p>
+          </div>
+        </details>
+
+        <!-- Week 8 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 8:</strong> Oct 6 – Oct 12, 2025
+            <span class="weekly-status status-red">Off Track</span>
+          </summary>
+          <div class="weekly-content">
+            <strong>Accomplishments:</strong>
+            <ul>
+              <li>Completed Module 2 for GA cert</li>
+              <li>Spoke with Professor to recieve critical feedback on project charter</li>
+              <li>Reviewed current project charter with feedback provided</li>
+            </ul>
+            <strong>Plans for Next Week:</strong>
+            <ul>
+              <li>Perform GAP analysis on current skills vs required skills for 3 Job Role Postings related to
+                Information Systems</li>
+              <li>Create/Update deliverables based on GAP results</li>
+              <li>Update Project Charter to better reflect new Goal.</li>
+            </ul>
+            <strong>Upcoming Milestones</strong>
+            <table>
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Target Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>N/a</td>
+                  <td>10/16/2025</td>
+                  <td>DELAYED</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>N/a</td>
+                  <td>10/16/2025</td>
+                  <td>DELAYED</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>N/a</td>
+                  <td>10/16/2025</td>
+                  <td>DELAYED</td>
+                </tr>
+              </tbody>
+              </tbody>
+            </table>
+            <strong>Issues & Risks / Mitigations:</strong>
+            <ul>
+              <Strong>Project Goal Pivot CRITICAL</STrong>
+              <p><strong>Mitigation:</strong> Overall goal has been changed to better align to something that will have
+                a
+                tangible benefit to me. More time will need to be dedicated to project charter to recover for lost time.
+              </p>
+            </ul>
+            <strong>Changes Since Last Report</strong>
+            <ul>
+              <li>No changes to report</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 7 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 7:</strong>Sept 29 – Oct 5, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <strong>Accomplishments:</strong>
+            <ul>
+              <li>Completed Google Analytics Certification Module 1</li>
+              <li>Updated Project Charter and removed missing WBS tab. </li>
+              <li>Conducted dataset exploration and identified candidate datasets for the analysis phase.</li>
+            </ul>
+            <strong>Plans for Next Week:</strong>
+            <ul>
+              <li>Complete Google Analytics Certification Module 2.</li>
+              <li>Finalize dataset selection and begin initial data cleaning. </li>
+              <li>Start building the portfolio website structure to house deliverables. </li>
+            </ul>
+            <strong>Upcoming Milestones</strong>
+            <table>
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Target Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Complete Google Analytics Module 2</td>
+                  <td>10/12/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Finalize Dataset Selection</td>
+                  <td>10/14/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Build Portfolio Framework</td>
+                  <td>10/19/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              </tbody>
+              </tbody>
+            </table>
+            <strong>Issues & Risks / Mitigations:</strong>
+            <ul>
+              <li>No issues or risks to report at this time.</li>
+            </ul>
+            <strong>Changes Since Last Report</strong>
+            <ul>
+              <li>No changes to report</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Week 6 -->
+        <details class="weekly-details">
+          <summary class="weekly-summary">
+            <strong>Week 6:</strong>Sept 22 – Sept 28, 2025
+            <span class="weekly-status status-green">On Track</span>
+          </summary>
+          <div class="weekly-content">
+            <strong>Accomplishments:</strong>
+            <ul>
+              <li>Began working on Google Analytics certification module 1</li>
+              <li>Completed draft of Data Analysis Goals.</li>
+              <li>Reviewed and updated Work tasks.</li>
+            </ul>
+            <strong>Plans for Next Week:</strong>
+            <ul>
+              <li>Dataset candidate discovery</li>
+              <li>Google Analytics certification module 2</li>
+              <li>Portfolio template discovery</li>
+            </ul>
+            <strong>Upcoming Milestones</strong>
+            <table>
+              <thead>
+                <tr>
+                  <th>Milestone</th>
+                  <th>Target Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Complete Google DA Certificate</td>
+                  <td>10/9/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Identify Dataset Candidates</td>
+                  <td>10/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              <tbody>
+                <tr>
+                  <td>Portfolio framework setup</td>
+                  <td>10/11/2025</td>
+                  <td>ON TRACK</td>
+                </tr>
+              </tbody>
+              </tbody>
+            </table>
+            <strong>Issues & Risks / Mitigations:</strong>
+            <ul>
+              <li>No issues or risks to report at this time.</li>
+            </ul>
+            <strong>Changes Since Last Report</strong>
+            <ul>
+              <li>No changes to report</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Fernando Olvera. All rights reserved.
+  </footer>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

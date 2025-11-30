@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fernando Olvera | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ---------- Global styles ---------- */
+    :root {
+      --bg: #f7f7fb;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Layout ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      transition: background 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      background: #e5e7eb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    section {
+      padding: 2.5rem 0;
+      scroll-margin-top: 4.5rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 0.6rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    /* ---------- Hero section ---------- */
+    .hero {
+      display: grid;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid #111827;
+      background: #111827;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      background: #000000;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #111827;
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #e5e7eb;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    .hero-card {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-list {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+
+    .hero-card-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ---------- Reusable card grid ---------- */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+    }
+
+    /* ---------- Skills list ---------- */
+    .skills-groups {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .skills-groups {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .skills-group-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .skills-group-list {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-wrapper {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+      max-width: 520px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-label {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f9fafb;
+    }
+
+    /* ========== MODERN TABLE STYLING (2025 look) ========== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  font-size: 0.94rem;
+  background: var(--bg-alt);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+thead th {
+  background: #1e293b;
+  color: #e2e8f0;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  transition: all 0.18s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: #e0f2fe;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+td, th {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+  color: #334155;
+}
+
+/* Last row no bottom border */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Special styling for specific tables */
+.stakeholder-table thead th,
+.wbs-table thead th,
+.budget-table thead th {
+  background: #1e40af;  /* Deep blue for header */
+}
+
+.stakeholder-table tbody td,
+.wbs-table tbody td,
+.budget-table tbody td {
+  font-size: 0.92rem;
+}
+
+/* Budget table specific enhancements */
+.bt-band {
+  font-weight: 700;
+  background: #f1f5f9 !important;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.bt-subtotal td,
+.bt-total td {
+  font-weight: 700;
+  background: #fef3c7 !important;
+  color: #92400e;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* WBS table indentation for hierarchy */
+.wbs-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #1e40af;
+  width: 80px;
+}
+
+/* Chip styles (already good, just slight polish) */
+.type-chip {
+  font-size: 11px !important;
+  padding: 4px 9px !important;
+}
+
+/* Responsive tables on small screens */
+@media (max-width: 640px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50% !important;
+    text-align: right;
+  }
+  
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    font-weight: 600;
+    text-align: left;
+    color: #1e40af;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <!-- Replace with your name or logo -->
+        <a href="index.html">Fernando Olvera</a>
+      </div>
+      <nav class="nav-links">
+        <a href="project-charter.html">Project Charter</a>
+        <a href="project-status-reports.html">Project Status Reports</a>
+        <a href="project-closure-document.html">Project Closure Document</a>
+        <a href="star-stories.html">STAR Stories</a>
+        <a href="interviews.html">Interviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div>
+        <h1 class="hero-title"><span>🎓Project Charter</span></h1>
+        <p class="hero-tagline">
+          This project uses real job postings to define role-specific competencies, performs a personal
+          GAP analysis comparing current capabilities to requirements, and executes a targeted development plan.
+          The plan culminates in tangible, career-aligned outputs:
+          a skill development evidence set (mini-projects/certifications), updated resume and LinkedIn,
+          and role-specific application materials.
+        </p>
+
+      </div>
+
+      <nav class="hero-card">
+        <div class="hero-card-title">On this page (Click to navigate)</div>
+        <a href="#project-goal">📋 Project Goal </a><br>
+        <a href="#vision-mission-strategy-alignment">🎯 Vision, Mission, & Strategy Alignment</a><br>
+        <a href="#business-case-justification">💼 Business Case & Justification</a><br>
+        <a href="#high-level-scope">🔭 High Level Scope</a><br>
+        <a href="#stakeholder register">👥 Stakeholder Register</a><br>
+        <a href="#deliverables">📦 Deliverables</a><br />
+        <a href="#work-breakdown-structure">🧩 Work Breakdown Structure</a><br>
+        <a href="#budget-cost-estimate">💵 Budget & Cost Estimate</a><br>
+        <a href="#project-methodology">🧭 Project Methodology</a><br>
+        <a href="#multiple-release-schedule">📊 Multiple Release Schedule</a><br>
+        <a href="#tool-selection-setup">🛠️ Tool Selection & Setup</a><br>
+        <a href="#project-tool-screenshot">📷 Project Tool Screenshot</a><br>
+      </nav>
+
+    </section>
+
+    <section id="project-goal">
+      <h2>📋 Project Goal</h2>
+      <p>
+        Identify, analyze, and close the skill gaps necessary to secure a career in the information technology
+        field, focusing on roles aligned to my background and interests: Business Operations (Raptor),
+        Business Analyst (Starlink), and IT Services.
+      </p>
+      <p>
+        <b>Ultimate Purpose:</b> Align my education and experience with employer expectations to obtain a full-time
+        role in Business Operations, Business Analysis, or IT Services.
+      </p>
+    </section>
+
+    <section id="vision-mission-strategy-alignment">
+      <h2>🎯 Vision, Mission, & Strategy Alignment</h2>
+      <p>Apply technology and data to improve decisions, efficiency, and user experience in high-stakes
+        environments (manufacturing, customer operations, engineering support).</p>
+
+      <h4>Vision Alignment (3–5 years):</h4>
+      <p>Progress into a Business/IT role that blends analytics, operations, and service excellence—building
+        toward leadership in data-driven decision-making and IT service delivery.
+      </p>
+
+      <h4>Strategic Goal Support (Semester):</h4>
+
+      <ul>
+
+        <li>Translate target roles into a concrete competency map (skills, tools, responsibilities).</li>
+        <li>Close priority gaps (SQL, Python, ITSM fundamentals) with measurable outputs.</li>
+        <li>Package outcomes into role-ready materials to support successful applications and interviews.</li>
+
+      </ul>
+    </section>
+
+    <section id="business-case-justification">
+      <h2>💼 Business Case & Justification</h2>
+
+      <div class="skills-groups" style="margin-top: 1.25rem;">
+        <div>
+          <div class="skills-group-title">Professional Value:</div>
+          <div class="skills-group-list">
+            <li>Targets in-demand competencies drawn directly from enterprise job descriptions.</li>
+            <li>Produces verifiable artifacts (SQL queries w/ linkedin cert, Python notebook w/ linkedin cert, IT
+              Fundamentals documentation) to evidence skills.</li>
+            <li>Improves ability to communicate analytical insights and service impacts to leadership.</li>
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">Personal Value:
+          </div>
+          <div class="skills-group-list">
+            <li>Leverages current SpaceX experience (inventory/IT hardware workflows) into BA/IT Services career paths
+            </li>
+            <li>Builds confidence via structured skill development and tangible outputs.</li>
+            <li>Provides a structured path from coursework to employment with clear milestones.</li>
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">Learning Outcomes:</div>
+          <div class="skills-group-list">
+            <li>Intermediate SQL (joins, views, aggregations) and data modeling for analytics use cases.</li>
+            <li>Python for data automation (ETL basics, CSV to dashboard pipeline, simple forecasting).</li>
+            <li>IT service fundamentals (ITIL/ITSM concepts, asset lifecycle and ticket workflows).</li>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="high-level-scope">
+      <h2>🔭 High-Level Scope</h2>
+
+      <h4>✅ In Scope for Semester Project</h4>
+      <ul>
+        <li>Analyze three target roles (Business Ops, Business Analyst, IT Services Technician).</li>
+        <li>Create a role-by-skill matrix and perform a personal GAP analysis.</li>
+        <li>Design and execute a skills development plan (SQL, Python, Help Desk Fundamentals).</li>
+        <li>Update resume &amp; LinkedIn; prepare role-specific cover letter templates.</li>
+      </ul>
+
+      <h4>🗺️ Roadmap Items (≤6 Months)</h4>
+      <ul>
+        <li>Attempt one entry-level certification (CompTIA A+ or ITIL 4 Foundation or DA-100 equivalent).</li>
+        <li>Add a BI dashboard (Power BI if first is Tableau, or vice versa).</li>
+        <li>Expand Python automation into a small ETL pipeline to a hosted dashboard.</li>
+      </ul>
+
+      <h4>❌ Out of Scope</h4>
+      <ul>
+        <li>Guaranteeing employment outcomes (applications may occur, but hiring is outside project control).</li>
+        <li>Building enterprise-grade data platforms beyond the scope of a semester.</li>
+        <li>Pursuing multiple advanced certifications during the semester.</li>
+      </ul>
+    </section>
+
+    <section id="stakeholder register">
+      <h2>👥 Stakeholder Register</h2>
+      <table class="stakeholder-table">
+        <thead>
+          <tr>
+            <th>Stakeholder</th>
+            <th>Category</th>
+            <th>Role/Interest</th>
+            <th>Power</th>
+            <th>Interest</th>
+            <th>Quadrant</th>
+            <th>Engagement Strategy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Instructor (Prof. Espinoza)</td>
+            <td>Internal</td>
+            <td>Evaluates project; ensures alignment with learning outcomes</td>
+            <td>High</td>
+            <td>High</td>
+            <td>Manage Closely</td>
+            <td>Bi-weekly updates; request feedback on GAP analysis and artifacts.</td>
+          </tr>
+          <tr>
+            <td>Career Center / Mentors</td>
+            <td>Internal/External</td>
+            <td>Resume/LinkedIn review; mock interviews</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Manage Closely</td>
+            <td>Schedule reviews at midterm and final weeks; incorporate feedback.</td>
+          </tr>
+          <tr>
+            <td>Peers/Classmates</td>
+            <td>Internal</td>
+            <td>Peer feedback on dashboards, SQL, and SOPs</td>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>Keep Informed</td>
+            <td>Share prototypes and collect comments in class/Teams.</td>
+          </tr>
+          <tr>
+            <td>Future Employers / Recruiters</td>
+            <td>External</td>
+            <td>Consumers of final artifacts and application materials</td>
+            <td>High</td>
+            <td>Medium</td>
+            <td>Keep Informed</td>
+            <td>Align artifacts to job criteria; showcase results on portfolio and LinkedIn.</td>
+          </tr>
+          <tr>
+            <td>University IT / Lab Resources</td>
+            <td>Internal</td>
+            <td>Access to software/tools for SQL, BI, and Python</td>
+            <td>Medium</td>
+            <td>Low</td>
+            <td>Monitor</td>
+            <td>Use as needed; report blockers promptly.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="power-interest-grid">
+        <h4>Power-Interest Grid Visualization</h4>
+        <img alt="Power-Interest Grid" src="./index_files/Matrix.png">
+      </div>
+    </section>
+
+    <section id="deliverables">
+      <h2>📦 Deliverables</h2>
+      <style>
+        .type-chip {
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+        }
+
+        .type-tangible {
+          background: #28a745;
+        }
+
+        .type-intangible {
+          background: #dc3545;
+        }
+
+        .type-outcome {
+          background: #007bff;
+        }
+      </style>
+      <table class="stakeholder-table">
+        <thead>
+          <tr>
+            <th>Deliverable</th>
+            <th>Type</th>
+            <th>SMART Description</th>
+            <th>Definition of Done</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Role Research Summary (3 roles)</td>
+            <td><span class="type-chip type-tangible">Tangible</span></td>
+            <td>Compile a comparative table of Business Ops Analyst, Business Analyst, and IT Services Technician
+              with responsibilities, tools, and required skills.</td>
+            <td>Matrix completed and cited to postings; uploaded to portfolio repo.</td>
+          </tr>
+          <tr>
+            <td>Personal GAP Analysis Report</td>
+            <td><span class="type-chip type-tangible">Tangible</span></td>
+            <td>Map current skills (from resume/experience) to role requirements; identify priority gaps and rank
+              by impact.</td>
+            <td>GAP table approved by instructor; risks/assumptions documented.</td>
+          </tr>
+          <tr>
+            <td>Skill Development Plan</td>
+            <td><span class="type-chip type-tangible">Tangible</span></td>
+            <td>Create a 6 week plan targeting SQL, Python, and IT Service fundamentals; include milestones and
+              artifacts.</td>
+            <td>Plan baselined in Jira; milestones and evidence types defined.</td>
+          </tr>
+          <tr>
+            <td>Evidence Set: Analytics &amp; IT Artifacts</td>
+            <td><span class="type-chip type-tangible">Tangible</span></td>
+            <td>Produce 3 artifacts: SQL, Python, IT Service Fundamentals.</td>
+            <td>Literature completion w/ verified linkedin course</td>
+          </tr>
+          <tr>
+            <td>Career Package (Resume, LinkedIn, Cover Letters)</td>
+            <td><span class="type-chip type-outcome">Outcome</span></td>
+            <td>Revise resume and LinkedIn to reflect new skills and artifacts; draft two role-specific cover
+              letter templates by Week 14.</td>
+            <td>PDF resume, LinkedIn updates logged (screenshots), two templates saved.</td>
+          </tr>
+          <tr>
+            <td>Apply to 3 Target IT/BA Roles</td>
+            <td><span class="type-chip type-outcome">Outcome</span></td>
+            <td>Submit at least 3 targeted job applications (aligned to identified roles — Business Ops Analyst,
+              Business Analyst, IT Services Technician) using the finalized career package.</td>
+            <td>Evidence of 3 submitted applications (screenshots or submission confirmations) uploaded to
+              portfolio.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section id="work-breakdown-structure">
+      <h2>🧩 Work Breakdown Structure</h2>
+
+      <div class="tabs" role="tablist" aria-label="Work Breakdown Structure">
+        <button class="tab" type="button" data-panel="panel-d1">Role Research</button>
+        <button class="tab" type="button" data-panel="panel-d2">GAP Analysis</button>
+        <button class="tab" type="button" data-panel="panel-d3">Skill Development</button>
+        <button class="tab" type="button" data-panel="panel-d4">Career Package</button>
+        <button class="tab" type="button" data-panel="panel-d5">Applications</button>
+      </div>
+
+      <div class="tabpanel" id="panel-d1" role="tabpanel">
+        <h3 class="wbs-heading">Role Research Summary</h3>
+        <div class="table-wrap">
+          <table class="wbs-table">
+            <thead>
+              <tr>
+                <th>WBS ID</th>
+                <th>Level</th>
+                <th>Task Name</th>
+                <th>Duration (days)</th>
+                <th>Dependencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wbs-id">1.0</td>
+                <td>Deliverable</td>
+                <td>Role Research Summary</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">1.1</td>
+                <td>Work Package</td>
+                <td>Collect postings &amp; extract competencies</td>
+                <td>3.0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">1.1.1</td>
+                <td>Task</td>
+                <td>Parse responsibilities, tools, KPIs</td>
+                <td>1.5</td>
+                <td>1.1</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">1.1.2</td>
+                <td>Task</td>
+                <td>Build comparative matrix (3 roles)</td>
+                <td>1.5</td>
+                <td>1.1.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tabpanel" id="panel-d2" role="tabpanel" hidden>
+        <h3 class="wbs-heading">Personal GAP Analysis</h3>
+        <div class="table-wrap">
+          <table class="wbs-table">
+            <thead>
+              <tr>
+                <th>WBS ID</th>
+                <th>Level</th>
+                <th>Task Name</th>
+                <th>Duration (days)</th>
+                <th>Dependencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wbs-id">2.0</td>
+                <td>Deliverable</td>
+                <td>GAP Analysis Report</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">2.1</td>
+                <td>Work Package</td>
+                <td>Current skills inventory (resume + coursework)</td>
+                <td>2.0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">2.2</td>
+                <td>Work Package</td>
+                <td>Gap mapping &amp; prioritization</td>
+                <td>3.0</td>
+                <td>2.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tabpanel" id="panel-d3" role="tabpanel" hidden>
+        <h3 class="wbs-heading">Skill Development</h3>
+        <div class="table-wrap">
+          <table class="wbs-table">
+            <thead>
+              <tr>
+                <th>WBS ID</th>
+                <th>Level</th>
+                <th>Task Name</th>
+                <th>Duration (days)</th>
+                <th>Dependencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wbs-id">3.0</td>
+                <td>Deliverable</td>
+                <td>Skill Development Plan</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">3.1</td>
+                <td>Work Package</td>
+                <td>SQL Certification</td>
+                <td>14.0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">3.2</td>
+                <td>Work Package</td>
+                <td>Python Certification</td>
+                <td>14.0</td>
+                <td>3.1</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">3.3</td>
+                <td>Work Package</td>
+                <td>IT Fundamentals Certification</td>
+                <td>7.0</td>
+                <td>3.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tabpanel" id="panel-d4" role="tabpanel" hidden>
+        <h3 class="wbs-heading">Career Package</h3>
+        <div class="table-wrap">
+          <table class="wbs-table">
+            <thead>
+              <tr>
+                <th>WBS ID</th>
+                <th>Level</th>
+                <th>Task Name</th>
+                <th>Duration (days)</th>
+                <th>Dependencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wbs-id">4.0</td>
+                <td>Deliverable</td>
+                <td>Career Package</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">4.1</td>
+                <td>Work Package</td>
+                <td>Resume &amp; LinkedIn update</td>
+                <td>3.0</td>
+                <td>3.x</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">4.2</td>
+                <td>Work Package</td>
+                <td>Cover letter templates (BA &amp; IT Services)</td>
+                <td>2.0</td>
+                <td>4.1</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">4.3</td>
+                <td>Work Package</td>
+                <td>Portfolio integration of artifacts</td>
+                <td>3.0</td>
+                <td>3.x</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tabpanel" id="panel-d5" role="tabpanel" hidden>
+        <h3 class="wbs-heading">Applications</h3>
+        <div class="table-wrap">
+          <table class="wbs-table">
+            <thead>
+              <tr>
+                <th>WBS ID</th>
+                <th>Level</th>
+                <th>Task Name</th>
+                <th>Duration (days)</th>
+                <th>Dependencies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wbs-id">5.0</td>
+                <td>Deliverable</td>
+                <td>Applications (Apply to 3 Target IT/BA Roles)</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.1</td>
+                <td>Work Package</td>
+                <td>Build target role list &amp; job criteria (BA, Biz Ops, IT Services)</td>
+                <td>1.0</td>
+                <td>4.0</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.2</td>
+                <td>Task</td>
+                <td>Tailor resume &amp; LinkedIn for each application</td>
+                <td>1.0</td>
+                <td>4.1</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.3</td>
+                <td>Task</td>
+                <td>Draft role-specific cover letters (2 templates + 1 variant)</td>
+                <td>1.0</td>
+                <td>4.2</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.4</td>
+                <td>Task</td>
+                <td>Submit 3 targeted applications through employer portals</td>
+                <td>1.0</td>
+                <td>5.2, 5.3</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.5</td>
+                <td>Task</td>
+                <td>Track submissions &amp; follow-ups (ATS status, recruiter outreach)</td>
+                <td>0.5</td>
+                <td>5.4</td>
+              </tr>
+              <tr>
+                <td class="wbs-id">5.6</td>
+                <td>Task</td>
+                <td>Capture evidence (screenshots/confirmations) for portfolio</td>
+                <td>0.5</td>
+                <td>5.4, 5.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="budget-cost-estimate">
+      <h2>💵 Budget &amp; Cost Estimate</h2>
+
+      <div class="table-wrap">
+        <table class="budget-table">
+          <thead>
+            <tr>
+              <th>Cost Item</th>
+              <th>Quantity/Hours</th>
+              <th>Rate/Price</th>
+              <th class="text-right">Total Cost</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <!-- LABOR -->
+            <tr class="bt-band bt-labor">
+              <td colspan="4">👨‍💻 LABOR COSTS</td>
+            </tr>
+            <tr>
+              <td>Analyst / Student Researcher</td>
+              <td>120</td>
+              <td>$25/hr</td>
+              <td class="text-right">$3,000</td>
+            </tr>
+            <tr>
+              <td>Dashboard Developer</td>
+              <td>40</td>
+              <td>$30/hr</td>
+              <td class="text-right">$1,200</td>
+            </tr>
+            <tr class="bt-subtotal">
+              <td colspan="3"><strong>LABOR SUBTOTAL</strong></td>
+              <td class="text-right">$4,200</td>
+            </tr>
+
+            <!-- SOFTWARE -->
+            <tr class="bt-band bt-software">
+              <td colspan="4">💻 SOFTWARE / LEARNING</td>
+            </tr>
+            <tr>
+              <td>Tableau Public / Power BI (Student)</td>
+              <td>N/A</td>
+              <td>Free</td>
+              <td class="text-right">$0</td>
+            </tr>
+            <tr>
+              <td>Practice Exam or Learning Resources</td>
+              <td>1</td>
+              <td>$49</td>
+              <td class="text-right">$49</td>
+            </tr>
+
+            <!-- MATERIALS -->
+            <tr class="bt-band bt-materials">
+              <td colspan="4">📦 MATERIALS</td>
+            </tr>
+            <tr>
+              <td>Misc. supplies (notebooks, printing)</td>
+              <td>1</td>
+              <td>$20</td>
+              <td class="text-right">$20</td>
+            </tr>
+
+            <!-- SERVICES -->
+            <tr class="bt-band bt-services">
+              <td colspan="4">🧰 SERVICES</td>
+            </tr>
+            <tr>
+              <td>LinkedIn Premium (optional)</td>
+              <td>1 month</td>
+              <td>$39</td>
+              <td class="text-right">$39</td>
+            </tr>
+
+            <!-- TOTALS -->
+            <tr class="bt-subtotal">
+              <td colspan="3"><strong>SUBTOTAL DIRECT COSTS</strong></td>
+              <td class="text-right">$4,308</td>
+            </tr>
+            <tr class="bt-subtotal">
+              <td>Contingency Reserve</td>
+              <td>10%</td>
+              <td class="muted">Applied to direct subtotal</td>
+              <td class="text-right">$431</td>
+            </tr>
+            <tr class="bt-total">
+              <td colspan="3"><strong>💰 TOTAL PROJECT BUDGET</strong></td>
+              <td class="text-right">$4,739</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="project-methodology">
+      <h2>🧭 Project Methodology</h2>
+      <p><strong>Requirements:</strong> Role analysis and deliverables are well-defined, but artifacts (dashboard,
+        SQL set, Python automation) benefit from iteration and feedback.</p>
+      <p><strong>Delivery Cadence:</strong> Three releases to reduce risk and incorporate feedback.</p>
+      <ul>
+        <li><strong>Release 1 (Week 3–5):</strong> Role research matrix + GAP analysis draft</li>
+        <li><strong>Release 2 (Week 6–10):</strong> Skills Plan + SQL Cert + Python Cert</li>
+        <li><strong>Release 3 (Week 11–14):</strong> IT Fundamentals Cert + Career Package + Application
+          Submissions</li>
+      </ul>
+      <p><strong>Approach:</strong></p>
+      <ul>
+        <li><strong>Predictive:</strong> Milestone dates and required artifacts.</li>
+        <li><strong>Iterative:</strong> Multiple feedback cycles for analytics and documentation artifacts.</li>
+        <li><strong>Incremental:</strong> Deliver usable outputs at each release.</li>
+      </ul>
+    </section>
+
+    <section id="multiple-release-schedule">
+      <div class="section" id="release-schedule">
+        <div class="section-header">
+          <h2 class="section-title">📊 Multiple Release Schedule</h2>
+        </div>
+        <div class="section-content" id="release-schedule-content">
+          <div class="schedule"
+            style="display:flex;justify-content:center;align-items:flex-start;gap:40px;flex-wrap:wrap;">
+            <div class="release"
+              style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback"
+                style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+                Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 1</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 3 – 5</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>Role research matrix (3 roles)</li>
+                <li>GAP analysis draft</li>
+                <li>Baseline Skills Plan (Jira)</li>
+              </ul>
+            </div>
+            <div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
+            <div class="release"
+              style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback"
+                style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+                Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 2</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 6 – 10</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>SQL Cert</li>
+                <li>Python Cert</li>
+                <li>Iteration with peer/instructor feedback</li>
+              </ul>
+            </div>
+            <div class="arrow" style="font-size:24px;color:#666;margin-top:50px;">→</div>
+            <div class="release"
+              style="background:#add8e6;padding:20px 30px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);position:relative;min-width:200px;text-align:left;">
+              <div class="feedback"
+                style="position:absolute;top:-15px;right:-15px;background:#ff6b6b;color:#fff;font-size:12px;font-weight:bold;padding:5px 10px;border-radius:50%;box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+                Feedback</div>
+              <h3 style="margin:0;color:#003366;text-align:center;">Release 3</h3>
+              <p style="margin:5px 0 10px;font-size:14px;color:#333;text-align:center;">Weeks 11 – 14</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;color:#222;">
+                <li>IT Fundamentals Cert</li>
+                <li>Resume/LinkedIn + Application Submissions</li>
+                <li>Portfolio integration and submission</li>
+              </ul>
+            </div>
+          </div>
+          <div class="legend" style="margin-top:30px;font-size:14px;color:#333;text-align:center;">
+            <strong>Delivery:</strong> Every 3–4 weeks | <strong>Feedback:</strong> After each release
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool-selection-setup">
+      <h2>🛠️ Tool Selection & Setup</h2>
+      <h4>Tools Explored</h4>
+      <ul>
+        <li><strong>Microsoft Project</strong> → Predictive planning and WBS reporting; heavy for solo student
+          use.</li>
+        <li><strong>Trello</strong> → Lightweight Kanban; limited reporting and dependency handling.</li>
+        <li><strong>Jira</strong> → Best mix for Hybrid delivery (backlog, sprints, releases, and reporting).</li>
+      </ul>
+      <h4>Final Choice: Jira</h4>
+      <p>Jira supports the Hybrid plan: fixed milestones with iterative artifacts and continuous feedback.</p>
+      <ul>
+        <li>Backlog &amp; Sprints → manage Skill Plan tasks and artifacts.</li>
+        <li>Releases → R1, R2, R3 cadence aligned to this charter.</li>
+        <li>Custom issue types → SQL, Dashboard, Python, SOP, Resume, LinkedIn.</li>
+      </ul>
+      <h4>Dependencies</h4>
+      <ul>
+        <li>Role research → precedes GAP analysis and Skill Plan.</li>
+        <li>SQL practice → precedes dashboard and Python automation.</li>
+        <li>Artifacts → precede resume/LinkedIn updates.</li>
+      </ul>
+      <h4>Example Backlog</h4>
+      <ul>
+        <li>Extract competencies from three postings</li>
+        <li>Complete GAP matrix and prioritize</li>
+        <li>Build SQL practice set</li>
+        <li>Create dashboard prototype and iterate</li>
+        <li>Write ITSM SOP for ticket/asset workflow</li>
+        <li>Automate CSV-to-dashboard update with Python</li>
+        <li>Update resume + LinkedIn and draft cover letters</li>
+        <li>Integrate artifacts into portfolio</li>
+      </ul>
+    </section>
+
+    <section id="project-tool-screenshot">
+      <h2>📷 Project Tool Screenshot</h2>
+      <img alt="Jira Project Screenshot" src="./index_files/Jira.png">
+    </section>
+
+
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Fernando Olvera. All rights reserved.
+  </footer>
+
+  <script>
+    // Tab functionality for WBS section
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tabpanel');
+
+    panels.forEach((p, i) => { if (i !== 0) p.hidden = true; });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-panel');
+
+        panels.forEach(p => p.hidden = true);
+        document.getElementById(target).hidden = false;
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
