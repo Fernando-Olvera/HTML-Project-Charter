@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fernando Olvera | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /* ---------- Global styles ---------- */
+        :root {
+            --bg: #f7f7fb;
+            --bg-alt: #ffffff;
+            --text: #111827;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --accent: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ---------- Layout ---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0.9rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            padding: 0.25rem 0.5rem;
+            border-radius: 999px;
+            transition: background 0.15s ease;
+        }
+
+        .nav-links a:hover {
+            background: #e5e7eb;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        section {
+            padding: 2.5rem 0;
+            scroll-margin-top: 4.5rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 0.6rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 0.25rem 0 0.75rem;
+        }
+
+        /* ---------- Hero section ---------- */
+        .hero {
+            display: grid;
+            gap: 1.75rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1.3rem;
+            border-radius: 999px;
+            border: 1px solid #111827;
+            background: #111827;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover {
+            background: #000000;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #111827;
+            border-color: var(--border);
+        }
+
+        .btn-outline:hover {
+            background: #e5e7eb;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .hero-note {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 0.75rem;
+        }
+
+        .hero-card {
+            background: var(--bg-alt);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.4rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-card-list {
+            padding-left: 1.1rem;
+            margin: 0;
+        }
+
+        .hero-card-list li {
+            margin-bottom: 0.2rem;
+        }
+
+        /* ---------- Reusable card grid ---------- */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .card {
+            background: var(--bg-alt);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.4rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        .pill {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #f9fafb;
+        }
+
+        /* ---------- Skills list ---------- */
+        .skills-groups {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .skills-groups {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .skills-group-title {
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .skills-group-list {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* ---------- Contact ---------- */
+        .contact-wrapper {
+            background: var(--bg-alt);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.4rem;
+            max-width: 520px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.25rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            background: #f9fafb;
+        }
+
+        /* ========== MODERN TABLE STYLING (2025 look) ========== */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1.5rem 0;
+            font-size: 0.94rem;
+            background: var(--bg-alt);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        thead th {
+            background: #1e293b;
+            color: #e2e8f0;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.9rem 1.2rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        tbody tr {
+            transition: all 0.18s ease;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #e0f2fe;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        td,
+        th {
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td {
+            color: #334155;
+        }
+
+        /* Last row no bottom border */
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Special styling for specific tables */
+        .stakeholder-table thead th,
+        .wbs-table thead th,
+        .budget-table thead th {
+            background: #1e40af;
+            /* Deep blue for header */
+        }
+
+        .stakeholder-table tbody td,
+        .wbs-table tbody td,
+        .budget-table tbody td {
+            font-size: 0.92rem;
+        }
+
+        /* Budget table specific enhancements */
+        .bt-band {
+            font-weight: 700;
+            background: #f1f5f9 !important;
+            color: #1e293b;
+            font-size: 0.9rem;
+        }
+
+        .bt-subtotal td,
+        .bt-total td {
+            font-weight: 700;
+            background: #fef3c7 !important;
+            color: #92400e;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /* WBS table indentation for hierarchy */
+        .wbs-id {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #1e40af;
+            width: 80px;
+        }
+
+        /* Chip styles (already good, just slight polish) */
+        .type-chip {
+            font-size: 11px !important;
+            padding: 4px 9px !important;
+        }
+
+        /* Responsive tables on small screens */
+        @media (max-width: 640px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 10px;
+                padding: 0.5rem;
+            }
+
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50% !important;
+                text-align: right;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 12px;
+                width: 45%;
+                font-weight: 600;
+                text-align: left;
+                color: #1e40af;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav">
+            <div class="nav-left">
+                <!-- Replace with your name or logo -->
+                <a href="index.html">Fernando Olvera</a>
+            </div>
+            <nav class="nav-links">
+                <a href="project-charter.html">Project Charter</a>
+                <a href="project-status-reports.html">Project Status Reports</a>
+                <a href="project-closure-document.html">Project Closure Document</a>
+                <a href="star-stories.html">STAR Stories</a>
+                <a href="interviews.html">Interviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero">
+            <div>
+                <h1 class="hero-title">👥 Interviews</h1>
+                <p class="hero-tagline">Insights from Project Management Professionals</p>
+            </div>
+
+            <div class="hero-card">
+                <h2 class="hero-card-title">Interview Overview</h2>
+                <p>This section contains summaries and key insights from interviews conducted with project management
+                    professionals. Each interview provides valuable perspectives on project management practices,
+                    challenges, and career development within the field.</p>
+            </div>
+        </section>
+
+        <section class="hero-card" id="interview1">
+            <h2>Siddharth Juneja</h2>
+            <img src="index_files/Siddharth.jfif" alt=""
+                style="width:150px;height:150px; float: left; border-radius: 50%;" />
+            <div right style="margin-left: 200px;">
+                <a href="https://www.linkedin.com/in/siddharthjuneja/">https://www.linkedin.com/in/siddharthjuneja/</a>
+                <p>Digital Advertising Manager | MBA, Digital Marketing</p>
+                <p>Interviewed: November 22, 2025</p>
+            </div>
+
+            <div class="hero-card-list" style="clear: both;">
+                <br>
+                <h3>Selection Rationale</h3>
+                <p>I selected Sid because his career path blends project management, digital strategy, and
+                    cross-functional leadership, all of which align with my academic focus on business intelligence,
+                    project execution, and career development. His experience transitioning across industries—from
+                    automotive to marketing to global media—made him a valuable stakeholder who understands how PM
+                    skills adapt to different environments. Sid also has both hands-on operational experience and
+                    strategic oversight, making him well-suited to provide insight into real-world project management
+                    expectations.
+                </p>
+                <h3>Conversation Summary</h3>
+                <p>During the interview, Sid began by sharing an overview of his professional background, explaining how
+                    his career evolved across multiple industries. He highlighted that his early roles in automotive and
+                    manufacturing exposed him to operations, logistics, and process coordination. Even though these
+                    roles were not formally titled “project management,” the work naturally required PM principles such
+                    as planning, prioritization, and task breakdown.</p>
+
+                <p>He explained that much of his project management expertise was developed organically through
+                    experience. As responsibilities grew, Sid increasingly relied on structured methods to organize
+                    work, manage timelines, and collaborate with cross-functional teams. He emphasized that project
+                    management is not limited to a specific title—many professionals already perform PM duties without
+                    realizing it.</p>
+
+                <p>Sid also described how he uses project management skills in his personal career development,
+                    especially in job searching. He treats the search process like a project: setting goals, monitoring
+                    progress, staying organized, and reviewing outcomes. This approach, he explained, helps maintain
+                    direction and reduces frustration, especially when navigating competitive job markets.</p>
+
+                <p>Throughout the conversation, Sid offered practical guidance on how to break down complex or
+                    overwhelming tasks. He recommended focusing on small, manageable steps and using tools like Kanban
+                    boards, timelines, and structured documentation. He reinforced that regardless of industry, the core
+                    PM skill set—communication, planning, risk management, and adaptability—remains essential and
+                    transferable.</p>
+                <h3>Key insights</h3>
+                <ul>
+                    <li>Project management skills matter across all industries, even when the role is not formally
+                        labeled as PM.</li>
+                    <li>Breaking work into smaller components reduces overwhelm and leads to higher-quality output.</li>
+                    <li>Career development can also be managed like a project, using milestones, tracking tools, and
+                        structured planning.</li>
+                    <li>Adaptability is critical—PM principles stay consistent even when industries and environments
+                        change.</li>
+                    <li>Communication and stakeholder alignment are the foundations of successful project execution.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <section class="hero-card" id="interview2">
+            <h2>Stephanie Rivera</h2>
+            <img src="index_files/Stephanie.jfif" alt=""
+                style="width:150px;height:150px; float: left; border-radius: 50%;" />
+            <div right style="margin-left: 200px;">
+                <a
+                    href="https://www.linkedin.com/in/stephanie-r-b07b97160/">https://www.linkedin.com/in/stephanie-r-b07b97160/</a>
+                <p>Supply Chain Subcontract Specialist | Northrop Grumman</p>
+                <p>Interviewed: November 26, 2025</p>
+            </div>
+            <div class="hero-card-list" style="clear: both;">
+                <br>
+                <h3>Selection Rationale</h3>
+                <p>I selected Stephanie because her role requires extensive coordination, communication, and stakeholder
+                    management—core principles of project management. As a subcontract specialist in a highly regulated
+                    aerospace environment, she interacts daily with engineering teams, program managers, suppliers, and
+                    compliance groups. This makes her a relevant stakeholder for understanding how large, complex
+                    projects are executed, monitored, and controlled.
+
+                </p>
+                <p>Her background across aerospace, consulting, and technology gives her a well-rounded perspective on
+                    how project planning, risk management, scheduling, and team communication differ across industries.
+                    Stephanie’s experience handling contract negotiations, supplier issues, and timeline constraints
+                    connects directly to our course themes.
+
+                </p>
+
+                <h3>Conversation Summary</h3>
+                <p>Stephanie began by explaining her career path and how project management is embedded into procurement
+                    and supply-chain roles, even if the title doesn’t explicitly say “project manager.” She emphasized
+                    that much of her work involves coordinating multiple moving parts—contracts, technical requirements,
+                    supplier schedules, and internal team needs. She highlighted that every procurement action is
+                    essentially a mini-project with scope, resources, risks, and deadlines.
+
+                </p>
+
+                <p>During the interview, Stephanie described how she supports large programs like the F-35 by ensuring
+                    suppliers deliver materials and components on schedule. She often works between engineering,
+                    compliance, and vendors to clarify requirements, resolve issues, and prevent delays. This requires
+                    active communication, documentation, and continuous monitoring—fundamental project management
+                    practices.
+
+                </p>
+
+                <p>She also shared examples of challenges she faces, such as suppliers missing deadlines, unclear
+                    technical specifications, shifting priorities, or unexpected material shortages. Stephanie explained
+                    that when these issues arise, she must quickly evaluate risks, communicate impacts to stakeholders,
+                    and collaborate on corrective actions. Her approach demonstrates the importance of early risk
+                    detection, escalation protocols, and adaptability in complex projects
+
+                </p>
+
+                <p>Throughout the conversation, Stephanie emphasized how essential relationship-building is to
+                    successful project execution. She noted that even highly technical environments depend on soft
+                    skills—listening, influencing, negotiating, and maintaining trust. She stressed that delays often
+                    occur not because of technical failures but because expectations were not aligned early in the
+                    project lifecycle.
+
+                </p>
+                <h3>Key insights</h3>
+                <ul>
+                    <li>Every procurement activity functions like a small project, with defined scope, schedule, risks,
+                        and stakeholders.</li>
+                    <li>Communication and alignment are more important than tools—many project delays come from unclear
+                        requirements or assumptions.</li>
+                    <li>Risk management must be proactive; issues grow when teams avoid escalating problems early.</li>
+                    <li>Strong project contributors are organized, adaptable, and collaborative, especially when dealing
+                        with cross-functional teams.</li>
+                    <li>Building trusting relationships with vendors and internal stakeholders is one of the most
+                        valuable skills in keeping projects on track.</li>
+                    <li>Documentation, traceability, and compliance are crucial in regulated industries and directly
+                        influence project timelines.</li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <section class="hero-card" id="interview3">
+            <h2>Vidisha Bhambri</h2>
+            <img src="index_files/Vidisha.jfif" alt=""
+                style="width:150px;height:150px; float: left; border-radius: 50%;" />
+            <div right style="margin-left: 200px;">
+                <a href="https://www.linkedin.com/in/vidbhamb/">https://www.linkedin.com/in/vidbhamb/</a>
+                <p>Product Manager at Tatari</p>
+                <p>Interviewed: December 5, 2025</p>
+            </div>
+            <div class="hero-card-list" style="clear: both;">
+                <br>
+                <h3>Selection Rationale</h3>
+                <p>I selected Vidisha because she has extensive experience in both product and project management roles
+                    across high-growth companies such as Meta, GotTheTest, and Johnson & Johnson. Her background
+                    combines technical product development, stakeholder communication, and cross-functional team
+                    leadership—skills that directly connect to project management principles we are learning in class.
+                    Additionally, her MBA from USC Marshall and her transition through multiple industries make her a
+                    valuable stakeholder who can provide real-world insights into managing complex projects and aligning
+                    teams around clear objectives.
+                </p>
+
+                <h3>Conversation Summary</h3>
+                <p>During the interview, Vidisha described her role as a Product Manager at Tatari and explained how
+                    product management heavily overlaps with project management. She emphasized that a major part of her
+                    role involves organizing timelines, defining requirements, coordinating with engineers and
+                    designers, and ensuring that product milestones are delivered on schedule. She shared that strong
+                    communication is the foundation of any successful project because misalignment can easily cause
+                    delays or rework.
+                </p>
+
+                <p>She also discussed her previous experiences at Meta, where she led the development of a vendor
+                    portal, and at GotTheTest, where she built a healthcare product from the ground up. These projects
+                    required not only technical understanding but also structured coordination among stakeholders, risk
+                    anticipation, and continuous iteration based on user feedback. Vidisha explained that her
+                    responsibilities often include managing trade-offs between scope, time, and resources—core
+                    principles in project management.
+                </p>
+
+                <p>Throughout the conversation, she highlighted that adaptability is essential. Unexpected
+                    challenges—such as shifting priorities, technical blockers, or unmet assumptions—require the project
+                    manager or product manager to re-evaluate plans while keeping teams informed and motivated. She also
+                    emphasized that successful project leaders ask questions, clarify ambiguity early, and invest time
+                    in establishing shared context across teams.
+                </p>
+
+                <h3>Key insights</h3>
+                <ul>
+                    <li>Clear requirements and aligned expectations reduce project risk. Misunderstandings at the
+                        beginning of a project often become the biggest sources of delays later.</li>
+                    <li>Communication is the central skill. Whether managing engineers, designers, or executives, the
+                        ability to frame information clearly ensures smoother execution.</li>
+                    <li>Adaptability is essential. Projects rarely go exactly as planned; the best managers adjust
+                        quickly and update stakeholders with transparency.</li>
+                    <li>User needs should guide decisions. Even in internal projects, product and project managers must
+                        use feedback, data, and real constraints to prioritize features or tasks.</li>
+                    <li>Career growth comes from continuous learning. Vidisha emphasized staying curious, seeking
+                        mentors, and taking on diverse challenges to build confidence and leadership capability.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Fernando Olvera. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

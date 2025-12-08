@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Fernando Olvera | Portfolio</title>
@@ -88,7 +89,9 @@
       scroll-margin-top: 4.5rem;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       margin: 0 0 0.6rem;
       line-height: 1.2;
     }
@@ -293,6 +296,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header / Navigation -->
@@ -311,35 +315,178 @@
       </nav>
     </div>
   </header>
-    <main>
-    
-        <!-- STAR Stories Section -->
-        <section hidden id="star-stories">
-        <h2>⭐ STAR Stories</h2>
-        <div class="grid grid-2">
-            <div class="card">
-            <h3>Situation</h3>
-            <p>Describe the context within which you performed a task or faced a challenge at work.</p>
-            </div>
-            <div class="card">
-            <h3>Task</h3>
-            <p>Explain the actual task or challenge that was involved.</p>
-            </div>
-            <div class="card">
-            <h3>Action</h3>
-            <p>Detail the specific actions you took to address the task or challenge.</p>
-            </div>
-            <div class="card">
-            <h3>Result</h3>
-            <p>Share the outcomes or results of your actions, quantifying them if possible.</p>
-            </div>
+  <main>
+
+    <section id="home" class="hero">
+      <div>
+        <h1 class="hero-title">⭐ STAR Stories</h1>
+        <p class="hero-tagline">Structured responses to behavioral interview questions using the STAR method.</p>
+      </div>
+
+      <nav class="hero-card">
+        <div class="hero-card-title">On this page (Click to navigate)</div>
+        <a href="#complexity">🧩 Complexity </a><br>
+        <a href="#leadership">👥 Leadership </a><br>
+        <a href="#value">💡 Value </a><br>
+        <a href="#risk">⚠️ Risk </a><br>
+        <a href="#tailoring">🎯 Tailoring </a>
+      </nav>
+    </section>
+
+    <!-- STAR Stories Section -->
+    <section id="complexity">
+      <h2>🧩 Complexity</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>📝 Situation</h3>
+          <p>During a semester-long analytics project, my team was tasked with analyzing two large datasets (FCC
+            Complaints and Baza Telecom) that contained inconsistent formats, missing values, multiple time fields, and
+            over a dozen variables that required transformation before analysis.</p>
         </div>
-        </section>
+        <div class="card">
+          <h3>🎯 Task</h3>
+          <p>My responsibility was to simplify the data pipelines, reduce confusion among team members, and create a
+            clear processing flow that would allow us to run descriptive and predictive models without major delays.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Action</h3>
+          <p>I reorganized the datasets in Tableau Prep, created data-type validation rules, grouped related variables,
+            and documented each transformation step in a shared workflow diagram. I also developed a standardized naming
+            convention so all team members could follow the same logic. To handle complexity, I broke the work into
+            clear phases—ingestion, cleaning, validation, and modeling—so everyone knew where their part fit.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Result</h3>
+          <p>We reduced prep time by 40%, eliminated repeated errors, and produced a dataset clean enough for regression
+            modeling and visual dashboards. The professor highlighted our pipeline clarity as one of the strongest parts
+            of the project..</p>
+        </div>
+      </div>
+    </section>
 
-    </main>
-    <footer>
-        &copy; 2025 Fernando Olvera. All rights reserved.
-    </footer>
+    <section id="leadership">
+      <h2>👥 Leadership</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>📝 Situation</h3>
+          <p>In a project management course, my team struggled with unclear direction and inconsistent participation on
+            a milestone that required heavy coordination: status reporting, risk updates, and a data-driven deliverable.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🎯 Task</h3>
+          <p>I stepped into an informal leadership role to help the group regain structure, clarify responsibilities,
+            and ensure the milestone was completed on time.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Action</h3>
+          <p>I facilitated a short virtual meeting, created a mini-WBS showing each member’s task, and implemented
+            check-ins on Teams. I uploaded my own progress early to set the tone and personally supported teammates who
+            were stuck by pairing with them to solve technical issues.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Result</h3>
+          <p>Our team delivered the milestone two days early and received positive feedback for organization. Team
+            communication improved significantly, and several members said the clarity helped them perform better in the
+            next milestone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="value">
+      <h2>💡 Value</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>📝 Situation</h3>
+          <p>At my previous job, I noticed our customer support team was constantly overwhelmed. Agents were staying
+            late, customers were frustrated with long wait times, and morale was dropping. I wasn’t asked to step in—but
+            I felt the issue was hurting both the team and the company.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Task</h3>
+          <p>I wanted to understand what was really driving the spike and see if there was a way to add value without
+            simply throwing more people at the problem.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Action</h3>
+          <p>I spent a few lunches sitting with the support team, listening to the types of calls they handled. I
+            realized many agents were answering the exact same questions—things customers could easily resolve if they
+            had clearer self-service options.
+            So, on my own initiative, I pulled three months of support data, grouped issue types, and calculated the
+            impact of repetitive calls. I then proposed a simple but targeted solution: improve the FAQ and automate the
+            top five repetitive requests.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Result</h3>
+          <p>After the changes rolled out, repetitive calls dropped significantly, and average wait times improved. The
+            team felt relief almost immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="risk">
+      <h2>⚠️ Risk</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>📝 Situation</h3>
+          <p>When I worked in customer service, our team was preparing to switch to a new ticketing system. During early
+            training sessions, I noticed that some features didn’t load properly on the older computers still used at
+            the front desk. Most people didn’t notice because they were testing on newer equipment.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Task</h3>
+          <p>Although it wasn’t my job to evaluate software, I felt responsible to bring up the issue because slow
+            ticket handling would directly impact customers and increase wait times.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Action</h3>
+          <p>I tested the system across different stations and documented which areas lagged or froze. I then shared the
+            findings with my supervisor and suggested delaying full implementation until IT could optimize the setup or
+            upgrade the front-desk computers. I also proposed a temporary workaround: routing more complex tickets to
+            the back office where machines ran faster.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Result</h3>
+          <p>IT confirmed the issue and released a patch before launch. The system ran smoothly for everyone on day one,
+            and our customer queue times stayed normal during the transition. My supervisor appreciated that I paid
+            attention and spoke up before the problem reached customers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tailoring">
+      <h2>🎯 Tailoring</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>📝 Situation</h3>
+          <p>In a previous job, I was responsible for onboarding new team members. We had a standard training process,
+            but one new hire struggled because English wasn’t their first language, and the training documents were
+            dense and full of technical terms.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Task</h3>
+          <p>I wanted to make sure they felt supported and confident in their new role, so I decided to adjust the
+            training approach while still covering all the required steps.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Action</h3>
+          <p>I broke the training into smaller sessions, walked through procedures hands-on instead of relying on long
+            manuals, and created simplified step-by-step guides with screenshots. I also paired with them for the first
+            few customer interactions to make sure they felt comfortable asking questions.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Result</h3>
+          <p>The new hire became fully trained faster than expected and later became one of the most reliable members on
+            the team. My manager appreciated the initiative and told me to use the tailored format for future new hires
+            because it made the onboarding process smoother for everyone.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    &copy; 2025 Fernando Olvera. All rights reserved.
+  </footer>
 </body>
-</html>
 
+</html>
